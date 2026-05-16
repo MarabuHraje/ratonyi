@@ -37,48 +37,54 @@ export default function Contact() {
           
           {/* Quick contact methods (Left) */}
           <div className="lg:col-span-5 flex flex-col gap-8">
-            <div className="bg-anthracite p-8 border border-concrete h-full">
-               <h3 className="text-2xl font-bold mb-8 font-heading text-white">Přímý kontakt</h3>
+            <div className="bg-anthracite p-8 border border-concrete h-full flex flex-col gap-8">
                
-               <a href="tel:+420777849773" className="flex items-start gap-6 group mb-8 border-b border-concrete pb-8">
-                 <div className="bg-primary/10 p-4 rounded-sm group-hover:bg-primary transition-colors">
-                   <Phone className="w-8 h-8 text-primary group-hover:text-white" />
-                 </div>
-                 <div>
-                   <p className="text-gray-400 font-medium mb-1">Zavolejte nám (Po-Pá 8-18)</p>
-                   <p className="text-3xl font-bold text-white group-hover:text-primary transition-colors">+420 777 849 773</p>
-                 </div>
-               </a>
+               <div>
+                 <h3 className="text-2xl font-bold mb-4 font-heading text-white">Adresa a Sídlo</h3>
+                 <p className="text-xl font-bold text-white mb-1">Perat s.r.o.</p>
+                 <p className="text-gray-400">Karlovarská 8</p>
+                 <p className="text-gray-400">273 51 Pavlov (okres Kladno)</p>
+                 <a href="https://www.peratsro.cz" className="text-primary hover:text-primary-dark transition-colors mt-2 inline-block">www.peratsro.cz</a>
+               </div>
 
-               <a href="mailto:perat.sro@seznam.cz" className="flex items-start gap-6 group mb-8 border-b border-concrete pb-8">
-                 <div className="bg-concrete p-4 rounded-sm group-hover:bg-primary transition-colors">
-                   <Mail className="w-8 h-8 text-white" />
+               <div className="border-t border-concrete pt-8">
+                 <h3 className="text-xl font-bold mb-4 font-heading text-white">Kontakty</h3>
+                 
+                 <div className="mb-6">
+                   <p className="text-gray-300 font-bold mb-1">Petr Rátonyi (jednatel)</p>
+                   <p className="text-gray-400 flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420777849773" className="hover:text-primary transition-colors">777 849 773</a></p>
+                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Mail className="w-4 h-4 text-primary"/> <a href="mailto:info@peratsro.cz" className="hover:text-primary transition-colors">info@peratsro.cz</a></p>
                  </div>
-                 <div>
-                   <p className="text-gray-400 font-medium mb-1">Napište e-mail</p>
-                   <p className="text-2xl font-bold text-white group-hover:text-primary transition-colors break-all">perat.sro@seznam.cz</p>
-                 </div>
-               </a>
 
-               <div className="flex items-start gap-6 group">
-                 <div className="bg-concrete p-4 rounded-sm">
-                   <MapPin className="w-8 h-8 text-white" />
-                 </div>
                  <div>
-                   <p className="text-gray-400 font-medium mb-1">Fakturační a kontaktní adresa</p>
-                   <p className="text-xl font-bold text-white">PERAT s.r.o.</p>
-                   <p className="text-gray-300 mb-1">Karlovarská 8, Česká republika</p>
-                   <p className="text-gray-300">IČO: 27955460</p>
+                   <p className="text-gray-300 font-bold mb-1">Kancelář</p>
+                   <p className="text-gray-400 flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420312527992" className="hover:text-primary transition-colors">312 527 992</a></p>
+                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Mail className="w-4 h-4 text-primary"/> <a href="mailto:perat.sro@seznam.cz" className="hover:text-primary transition-colors break-all">perat.sro@seznam.cz</a></p>
                  </div>
                </div>
-            </div>
 
-            <div className="bg-primary p-8 rounded-sm text-dark shadow-[0_10px_30px_rgba(249,115,22,0.2)]">
-               <h3 className="text-xl font-bold mb-3 flex items-center gap-3"><ShieldCheck className="w-6 h-6"/> Havarijní služba 24/7</h3>
-               <p className="text-dark/80 font-medium mb-4">Máte akutní stavební havárii, problém s vodou či porušenou statiku? Naše havarijní linka je dostupná. Neváhejte rovnou volat.</p>
-               <a href="tel:+420777849773" className="inline-flex items-center gap-2 bg-dark text-white px-6 py-3 font-bold rounded-sm hover:bg-black transition-colors w-full justify-center">
-                 Volat ihned
-               </a>
+               <div className="border-t border-concrete pt-8">
+                 <h3 className="text-xl font-bold mb-4 font-heading text-white">Ostatní údaje</h3>
+                 <div className="grid grid-cols-2 gap-4 mb-4">
+                   <div>
+                     <p className="text-gray-500 text-sm">IČO</p>
+                     <p className="text-gray-300">27955460</p>
+                   </div>
+                   <div>
+                     <p className="text-gray-500 text-sm">DIČ</p>
+                     <p className="text-gray-300">CZ27955460</p>
+                   </div>
+                 </div>
+                 <div className="mb-4">
+                     <p className="text-gray-500 text-sm">Bankovní spojení</p>
+                     <p className="text-gray-300">0413612339/0800</p>
+                 </div>
+                 <div>
+                     <p className="text-gray-500 text-sm">Spisová značka</p>
+                     <p className="text-gray-300 text-sm">C 129186 vedená u rejstříkového soudu v Praze</p>
+                 </div>
+               </div>
+
             </div>
           </div>
 

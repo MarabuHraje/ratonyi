@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, MapPin, Calendar, Plus, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Projects() {
   const [filter, setFilter] = useState("Vše");

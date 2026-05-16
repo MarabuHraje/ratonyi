@@ -21,7 +21,7 @@ function TopBar() {
             <Mail className="w-4 h-4" /> perat.sro@seznam.cz
           </a>
           <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4 cursor-pointer" /> Karlovarská 8, ČR
+            <MapPin className="w-4 h-4 cursor-pointer" /> Pavlov (okres Kladno)
           </div>
         </div>
         <div className="flex items-center gap-2 text-base font-bold animate-pulse">
@@ -141,24 +141,27 @@ function Footer() {
             </p>
             <div className="text-gray-400 text-sm">
               <p>IČO: 27955460</p>
+              <p>DIČ: CZ27955460</p>
             </div>
           </div>
 
           {/* Kontakt */}
           <div>
-            <h3 className="text-white font-bold mb-6 font-heading tracking-wide">RYCHLÝ KONTAKT</h3>
+            <h3 className="text-white font-bold mb-6 font-heading tracking-wide">KANCELÁŘ A KONTAKTY</h3>
             <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-gray-300">
-                <div className="bg-concrete p-2 rounded-full"><Phone className="w-4 h-4 text-primary" /></div>
-                <a href="tel:+420777849773" className="hover:text-primary transition-colors hover:underline">+420 777 849 773</a>
-              </li>
-              <li className="flex items-center gap-3 text-gray-300">
-                <div className="bg-concrete p-2 rounded-full"><Mail className="w-4 h-4 text-primary" /></div>
-                <a href="mailto:perat.sro@seznam.cz" className="hover:text-primary transition-colors hover:underline">perat.sro@seznam.cz</a>
-              </li>
               <li className="flex items-start gap-3 text-gray-300">
                  <div className="bg-concrete p-2 rounded-full mt-1"><MapPin className="w-4 h-4 text-primary" /></div>
-                 <span>Karlovarská 8<br/>Česká republika</span>
+                 <span>Perat s.r.o.<br/>Karlovarská 8<br/>273 51 Pavlov (okres Kladno)</span>
+              </li>
+              <li className="flex flex-col gap-2 text-gray-300 mt-4 border-t border-concrete pt-4">
+                <span className="text-white font-bold">Petr Rátonyi (jednatel)</span>
+                <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> <a href="tel:+420777849773" className="hover:text-primary transition-colors">+420 777 849 773</a></span>
+                <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> <a href="mailto:info@peratsro.cz" className="hover:text-primary transition-colors">info@peratsro.cz</a></span>
+              </li>
+              <li className="flex flex-col gap-2 text-gray-300 mt-4 border-t border-concrete pt-4">
+                <span className="text-white font-bold">Kancelář</span>
+                <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> <a href="tel:+420312527992" className="hover:text-primary transition-colors">+420 312 527 992</a></span>
+                <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> <a href="mailto:perat.sro@seznam.cz" className="hover:text-primary transition-colors">perat.sro@seznam.cz</a></span>
               </li>
             </ul>
           </div>
@@ -177,18 +180,27 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Opening Hours */}
+          {/* Ostatni udaje instead of opening hours */}
           <div>
-            <h3 className="text-white font-bold mb-6 font-heading tracking-wide">PRACOVNÍ DOBA</h3>
+            <h3 className="text-white font-bold mb-6 font-heading tracking-wide">OSTATNÍ ÚDAJE</h3>
             <ul className="space-y-3 text-gray-400">
-              <li className="flex justify-between border-b border-concrete pb-2"><span>Pondělí - Pátek:</span> <span className="text-white">8:00 - 18:00</span></li>
-              <li className="flex justify-between border-b border-concrete pb-2"><span>Sobota:</span> <span className="text-white">Dle domluvy</span></li>
-              <li className="flex justify-between border-concrete pb-2"><span>Neděle:</span> <span className="text-gray-500">Zavřeno</span></li>
+              <li className="flex flex-col border-b border-concrete pb-2">
+                 <span className="text-sm">IČO</span>
+                 <span className="text-white font-medium">27955460</span>
+              </li>
+              <li className="flex flex-col border-b border-concrete pb-2 mt-2">
+                 <span className="text-sm">DIČ</span>
+                 <span className="text-white font-medium">CZ27955460</span>
+              </li>
+              <li className="flex flex-col border-b border-concrete pb-2 mt-2">
+                 <span className="text-sm">Bankovní spojení</span>
+                 <span className="text-white font-medium">0413612339/0800</span>
+              </li>
+              <li className="flex flex-col border-concrete pb-2 mt-2">
+                 <span className="text-sm">Spisová značka</span>
+                 <span className="text-white text-sm mt-1">C 129186 vedená u rejstříkového soudu v Praze</span>
+              </li>
             </ul>
-            <div className="mt-6 bg-concrete/50 border border-primary/20 p-4 rounded-sm">
-               <p className="text-sm font-bold text-primary flex items-center gap-2 mb-1"><ShieldCheck className="w-4 h-4" /> Havarijní servis 24/7</p>
-               <p className="text-xs text-gray-400">Pro stávající i nové zákazníky v nouzi volejte ihned.</p>
-            </div>
           </div>
         </div>
         <div className="border-t border-concrete pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">

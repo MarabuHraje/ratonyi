@@ -5,60 +5,32 @@ import { Link } from "react-router-dom";
 export default function Services() {
   const services = [
     {
-      id: "rekonstrukce",
-      icon: Home,
-      title: "Rekonstrukce domů a bytů",
-      desc: "Kompletní proměny interiérů i exteriérů bytů a rodinných domů na klíč.",
-      points: ["Bourací práce a vyklízení", "Nové rozvody vody a elektra", "Zdění příček a sádrokartony", "Pokládka podlah a obkladů"]
+      id: "stavby-vodniho-hospodarstvi",
+      icon: Droplets,
+      title: "Stavby vodního hospodářství",
+      desc: "Specializujeme-se na výstavbu, údržbu a rekonstrukce vodohospodářských děl a infrastruktury.",
+      points: ["Úpravy vodních toků", "Rybníky a vodní nádrže", "Kanalizace a vodovody", "Protierozní opatření"]
     },
     {
-      id: "zednicke-prace",
-      icon: Wrench,
-      title: "Zednické práce",
-      desc: "Veškeré zednické činnosti od hrubé stavby po finální štuky.",
-      points: ["Vyzdívání nosných i nenosných stěn", "Betonování podlah a základů", "Vnitřní a vnější omítky", "Sádrokartonářské práce"]
+      id: "komplexni-reseni-inzenyrskych-praci",
+      icon: ShieldCheck,
+      title: "Komplexní řešení inženýrských prací",
+      desc: "Zabezpečujeme inženýrskou činnost od prvotní studie až po předání hotového díla.",
+      points: ["Projektová dokumentace a povolení", "Stavební dozor", "Koordinace subdodavatelů", "Rozpočtování a řízení staveb"]
     },
     {
-      id: "fasady",
-      icon: Brush,
-      title: "Fasády a zateplení",
-      desc: "Realizace moderních fasád a zateplovacích systémů pro snížení tepelných ztrát.",
-      points: ["Kontaktní zateplovací systémy (EPS, vata)", "Aplikace strukturálních omítek", "Renovace starých a poškozených fasád", "Nátěry fasád"]
-    },
-    {
-      id: "strechy",
-      icon: Hammer,
-      title: "Střechy a tesařské práce",
-      desc: "Dodávka a montáž střešních krytin, oprava krovů a kompletní tesařina.",
-      points: ["Montáž vazníků a klasických krovů", "Pokládka střešní krytiny", "Drobné i celkové opravy střech", "Klempířské práce"]
-    },
-    {
-      id: "interiery",
+      id: "zemni-prace",
       icon: HardHat,
-      title: "Interiérové úpravy",
-      desc: "Proměny vnitřních prostor na míru vašim požadavkům.",
-      points: ["Rekonstrukce bytových jader", "Výstavba koupelen", "Designové betonové stěrky", "Svěšování stropů sádrokartonem"]
+      title: "Zemní práce",
+      desc: "Veškeré terénní a výkopové práce těžkou mechanizací pro přípravu staveb.",
+      points: ["Výkopy základů a jímek", "Zarvnávání a modelace terénu", "Příprava podloží pod komunikace", "Dovoz a odvoz zemin"]
     },
     {
       id: "demolice",
       icon: Truck,
       title: "Demoliční práce",
-      desc: "Bezpečné a řízené demolice s následným odvozem a likvidací sutě.",
+      desc: "Bezpečné a řízené demolice objektů všech velikostí s likvidací suti.",
       points: ["Strojní i ruční demolice", "Vyklízení nemovitostí", "Odvoz suti na skládku", "Úpravy terénu po demolici"]
-    },
-    {
-      id: "havarijni",
-      icon: ShieldCheck,
-      title: "Havarijní opravy",
-      desc: "Okamžitý zásah při haváriích pro minimalizaci škod na majetku.",
-      points: ["Opravy prasklého potrubí (ve spolupráci)", "Zajištění narušené statiky po nehodách", "Nouzové opravy stržených střech", "Výjezdy 24/7"]
-    },
-    {
-      id: "voda-odpady",
-      icon: Droplets,
-      title: "Individuální stavební řešení",
-      desc: "Specifické a netradiční požadavky řešíme po osobní domluvě.",
-      points: ["Stavba opěrných zdí", "Bazénové přípravy a terasy", "Stavba plotů", "Zámkové dlažby a zpevněné plochy"]
     }
   ];
 
@@ -106,11 +78,11 @@ export default function Services() {
                 transition={{ delay: (idx % 2) * 0.1 }}
                 className="bg-dark border border-concrete p-8 md:p-10 flex flex-col items-start group hover:border-primary/50 transition-colors"
               >
-                <div className="flex items-center gap-6 mb-8 w-full border-b border-concrete pb-8">
-                  <div className="bg-primary/10 p-4 rounded-sm">
-                    <service.icon className="w-10 h-10 text-primary" />
+                <div className={`flex items-center gap-6 mb-8 w-full border-b pb-8 ${idx === 0 ? 'border-primary/30' : 'border-concrete'}`}>
+                  <div className={`p-4 rounded-sm ${idx === 0 ? 'bg-primary text-white' : 'bg-primary/10 text-primary'}`}>
+                    <service.icon className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold font-heading text-white">{service.title}</h3>
+                  <h3 className={`text-2xl md:text-3xl font-bold font-heading ${idx === 0 ? 'text-primary' : 'text-white'}`}>{service.title}</h3>
                 </div>
                 
                 <p className="text-lg text-gray-300 mb-8 font-light">
