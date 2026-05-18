@@ -26,19 +26,6 @@ export default function Projects() {
       ]
     },
     {
-      id: 2,
-      title: "Výkopové práce pro bytový dům",
-      location: "Sokolov",
-      category: "Zemní práce",
-      year: "2023",
-      desc: "Hloubení základové spáry, přesun zemin a finální modelace terénu pro novostavbu bytového domu.",
-      img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
-      gallery: [
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?q=80&w=2070&auto=format&fit=crop"
-      ]
-    },
-    {
       id: 3,
       title: "Inženýring komerční budovy",
       location: "Ostrov",
@@ -53,17 +40,20 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: "Demolice průmyslového areálu",
-      location: "Karlovy Vary",
+      title: "Demolice v areálu MŠ Kladno",
+      location: "MŠ Kladno",
       category: "Demoliční práce",
-      year: "2024",
-      desc: "Strojní demolice hal včetně odvozu a ekologické likvidace veškeré sutě a srovnání a přípravy pozemku.",
-      img: "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2070&auto=format&fit=crop",
-      gallery: [
-        "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2070&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?q=80&w=2070&auto=format&fit=crop"
-      ]
+      desc: "Kompletní asanace objektu s důrazem na maximální vytřídění stavebního odpadu před recyklací a ekologickou likvidací.",
+      img: "https://img.youtube.com/vi/zqdQZmA5BIo/maxresdefault.jpg",
+      videoId: "zqdQZmA5BIo"
+    },
+    {
+      id: 7,
+      title: "Demolice průmyslové budovy",
+      category: "Demoliční práce",
+      desc: "Rozsáhlá demolice průmyslového objektu s využitím těžké techniky. Efektivní a rychlé odstranění suti.",
+      img: "https://img.youtube.com/vi/tH5tRs8Qvsc/hqdefault.jpg",
+      videoId: "tH5tRs8Qvsc"
     },
     {
       id: 5,
@@ -115,14 +105,14 @@ export default function Projects() {
 
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (selectedProject) {
+    if (selectedProject && selectedProject.gallery) {
       setCurrentImageIndex((prev) => (prev + 1) % selectedProject.gallery.length);
     }
   };
 
   const prevImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (selectedProject) {
+    if (selectedProject && selectedProject.gallery) {
       setCurrentImageIndex((prev) => (prev - 1 + selectedProject.gallery.length) % selectedProject.gallery.length);
     }
   };
@@ -212,18 +202,24 @@ export default function Projects() {
                     <span className="text-xs font-bold uppercase tracking-widest text-dark bg-primary px-3 py-1 rounded-sm">
                       {project.category}
                     </span>
-                    <span className="text-xs font-bold uppercase tracking-widest text-white bg-white/20 backdrop-blur-sm border border-white/10 px-3 py-1 rounded-sm">
-                      {project.year}
-                    </span>
+                    {project.year && (
+                      <span className="text-xs font-bold uppercase tracking-widest text-white bg-white/20 backdrop-blur-sm border border-white/10 px-3 py-1 rounded-sm">
+                        {project.year}
+                      </span>
+                    )}
                   </div>
                   
                   <h3 className="text-2xl font-bold font-heading text-white mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
                   
-                  <div className="flex items-center gap-2 text-gray-300 mb-4 font-medium">
-                    <MapPin className="w-4 h-4 text-primary" /> {project.location}
-                  </div>
+                  {(project.location || project.year) && (
+                    <div className="flex items-center gap-2 text-gray-300 mb-4 font-medium">
+                      {project.location && <><MapPin className="w-4 h-4 text-primary" /> {project.location}</>}
+                      {project.location && project.year && <span className="opacity-50">|</span>}
+                      {project.year && <span>{project.year}</span>}
+                    </div>
+                  )}
                   
                   {/* Expanded description on hover */}
                   <div className="max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500 ease-in-out">
@@ -265,38 +261,53 @@ export default function Projects() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative group w-full h-[50vh] md:h-[70vh] bg-black">
-                <motion.img
-                  key={currentImageIndex}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                  src={selectedProject.gallery[currentImageIndex]}
-                  alt={`${selectedProject.title} - foto ${currentImageIndex + 1}`}
-                  className="w-full h-full object-contain"
-                />
-
-                {selectedProject.gallery.length > 1 && (
+                {selectedProject.videoId ? (
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${selectedProject.videoId}?autoplay=1`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                ) : (
                   <>
-                    <button
-                      onClick={prevImage}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-primary text-white flex items-center justify-center rounded-full transition-colors"
-                    >
-                      <ChevronLeft className="w-8 h-8" />
-                    </button>
-                    <button
-                      onClick={nextImage}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-primary text-white flex items-center justify-center rounded-full transition-colors"
-                    >
-                      <ChevronRight className="w-8 h-8" />
-                    </button>
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                      {selectedProject.gallery.map((_: any, i: number) => (
-                        <div
-                          key={i}
-                          className={`w-2.5 h-2.5 rounded-full transition-colors ${i === currentImageIndex ? 'bg-primary' : 'bg-white/30'}`}
-                        ></div>
-                      ))}
-                    </div>
+                    <motion.img
+                      key={currentImageIndex}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                      src={selectedProject.gallery[currentImageIndex]}
+                      alt={`${selectedProject.title} - foto ${currentImageIndex + 1}`}
+                      className="w-full h-full object-contain"
+                    />
+
+                    {selectedProject.gallery && selectedProject.gallery.length > 1 && (
+                      <>
+                        <button
+                          onClick={prevImage}
+                          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-primary text-white flex items-center justify-center rounded-full transition-colors"
+                        >
+                          <ChevronLeft className="w-8 h-8" />
+                        </button>
+                        <button
+                          onClick={nextImage}
+                          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-primary text-white flex items-center justify-center rounded-full transition-colors"
+                        >
+                          <ChevronRight className="w-8 h-8" />
+                        </button>
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                          {selectedProject.gallery.map((_: any, i: number) => (
+                            <div
+                              key={i}
+                              className={`w-2.5 h-2.5 rounded-full transition-colors ${i === currentImageIndex ? 'bg-primary' : 'bg-white/30'}`}
+                            ></div>
+                          ))}
+                        </div>
+                      </>
+                    )}
                   </>
                 )}
               </div>
@@ -305,10 +316,12 @@ export default function Projects() {
                 <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-4">
                   <div>
                     <h3 className="text-3xl font-bold font-heading text-white mb-2">{selectedProject.title}</h3>
-                    <div className="flex items-center gap-4 text-gray-400">
-                      <span className="flex items-center gap-1"><MapPin className="w-4 h-4 text-primary" /> {selectedProject.location}</span>
-                      <span className="flex items-center gap-1"><Calendar className="w-4 h-4 text-primary" /> {selectedProject.year}</span>
-                    </div>
+                    {(selectedProject.location || selectedProject.year) && (
+                      <div className="flex items-center gap-4 text-gray-400">
+                        {selectedProject.location && <span className="flex items-center gap-1"><MapPin className="w-4 h-4 text-primary" /> {selectedProject.location}</span>}
+                        {selectedProject.year && <span className="flex items-center gap-1"><Calendar className="w-4 h-4 text-primary" /> {selectedProject.year}</span>}
+                      </div>
+                    )}
                   </div>
                   <div className="bg-primary/10 border border-primary/30 px-4 py-2 rounded-sm text-primary font-bold tracking-widest uppercase text-sm">
                     {selectedProject.category}
