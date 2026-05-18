@@ -16,7 +16,7 @@ export default function About() {
           <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export default function About() {
               Stavitelé, na které se můžete <span className="text-primary">spolehnout</span>.
             </h1>
             <p className="text-xl text-gray-400 font-light leading-relaxed">
-              Jsme silným a stabilním partnerem pro vaše stavební vize. S důrazem na kvalitu, férové jednání a profesionální výsledek měníme plány v realitu v Karlových Varech a širokém okolí.
+              Jsme silným a stabilním partnerem pro vaše stavební vize. S důrazem na kvalitu, férové jednání a profesionální výsledek měníme plány v realitu pro klienty z celé České republiky.
             </p>
           </motion.div>
         </div>
@@ -39,7 +39,7 @@ export default function About() {
 
       {/* Intro Text */}
       <section className="py-24 bg-anthracite">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div 
                initial={{ opacity: 0, x: -20 }}
@@ -48,10 +48,10 @@ export default function About() {
             >
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">PERAT s.r.o. - Vaše lokální stavební firma</h2>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Náš příběh začal touhou dělat řemeslo poctivě a jinak. Jsme moderní stavební firma se sídlem v Karlových Varech. Za naší prací si pevně stojíme. Spojujeme tradiční stavební postupy s moderními technologiemi a materiály, abychom pro vás vytvořili dílo, které přetrvá generace.
+                Náš příběh začal touhou dělat řemeslo poctivě a jinak. Jsme moderní stavební firma se sídlem v Pavlově u Kladna. Za naší prací si pevně stojíme. Spojujeme tradiční stavební postupy s moderními technologiemi a materiály, abychom pro vás vytvořili dílo, které přetrvá generace.
               </p>
               <p className="text-gray-400 mb-8 leading-relaxed">
-                Zaměřujeme se jak na kompletní rekonstrukce rodinných domů a komerčních prostor, tak i na dílčí zednické, tesařské a pokrývačské práce. Vždy na čas, v domluveném rozpočtu a s maximálním ohledem na vaše požadavky.
+                Zaměřujeme se na stavby vodního hospodářství, zemní práce, demoliční práce a komplexní řešení inženýrských prací. Vždy na čas, v domluveném rozpočtu a s maximálním ohledem na vaše požadavky.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -85,13 +85,13 @@ export default function About() {
       {/* Stats */}
       <section className="py-24 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[length:24px_24px]"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
              {[
                { val: "10+", label: "Let na trhu" },
                { val: "150+", label: "Úspěšných projektů" },
                { val: "100%", label: "Dodržení termínů" },
-               { val: "24/7", label: "Havarijní servis" }
+               { val: "24/7", label: "Odborná podpora" }
              ].map((s, i) => (
                <div key={i} className="text-center p-6 bg-dark/10 backdrop-blur-sm rounded-sm">
                  <div className="text-4xl md:text-6xl font-black font-heading text-white mb-2">{s.val}</div>
@@ -104,7 +104,7 @@ export default function About() {
 
       {/* Values */}
       <section className="py-24 bg-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-2 flex items-center justify-center gap-2">
                Na čem si zakládáme

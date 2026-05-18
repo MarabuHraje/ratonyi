@@ -5,10 +5,17 @@ import { Link } from "react-router-dom";
 export default function Services() {
   const services = [
     {
-      id: "stavby-vodniho-hospodarstvi",
+      id: "zemni-prace-a-demolice",
+      icon: HardHat,
+      title: "Zemní práce a demolice",
+      desc: "Veškeré terénní úpravy, výkopy a bezpečné i řízené demolice s likvidací suti.",
+      points: ["Výkopy základů a jímek", "Modelace a zarovnávání terénu", "Strojní i ruční demolice", "Odvoz suti a zemin"]
+    },
+    {
+      id: "vodni-prace",
       icon: Droplets,
       title: "Stavby vodního hospodářství",
-      desc: "Specializujeme-se na výstavbu, údržbu a rekonstrukce vodohospodářských děl a infrastruktury.",
+      desc: "Specializujeme se na výstavbu, údržbu a rekonstrukce vodohospodářských děl a infrastruktury.",
       points: ["Úpravy vodních toků", "Rybníky a vodní nádrže", "Kanalizace a vodovody", "Protierozní opatření"]
     },
     {
@@ -19,18 +26,11 @@ export default function Services() {
       points: ["Projektová dokumentace a povolení", "Stavební dozor", "Koordinace subdodavatelů", "Rozpočtování a řízení staveb"]
     },
     {
-      id: "zemni-prace",
-      icon: HardHat,
-      title: "Zemní práce",
-      desc: "Veškeré terénní a výkopové práce těžkou mechanizací pro přípravu staveb.",
-      points: ["Výkopy základů a jímek", "Zarvnávání a modelace terénu", "Příprava podloží pod komunikace", "Dovoz a odvoz zemin"]
-    },
-    {
-      id: "demolice",
-      icon: Truck,
-      title: "Demoliční práce",
-      desc: "Bezpečné a řízené demolice objektů všech velikostí s likvidací suti.",
-      points: ["Strojní i ruční demolice", "Vyklízení nemovitostí", "Odvoz suti na skládku", "Úpravy terénu po demolici"]
+      id: "stavebni-prace",
+      icon: Home,
+      title: "Stavební práce",
+      desc: "Provádíme široké spektrum pozemních staveb od hrubých staveb až po finální dokončovací práce.",
+      points: ["Hrubé stavby a vyzdívky", "Základové desky a betonáže", "Rekonstrukce a modernizace", "Dokončovací práce"]
     }
   ];
 
@@ -47,7 +47,7 @@ export default function Services() {
           <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-dark/20"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export default function Services() {
 
       {/* Services List */}
       <section className="py-24 bg-anthracite">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
             {services.map((service, idx) => (
               <motion.div 
@@ -78,27 +78,27 @@ export default function Services() {
                 transition={{ delay: (idx % 2) * 0.1 }}
                 className="bg-dark border border-concrete p-8 md:p-10 flex flex-col items-start group hover:border-primary/50 transition-colors"
               >
-                <div className={`flex items-center gap-6 mb-8 w-full border-b pb-8 ${idx === 0 ? 'border-primary/30' : 'border-concrete'}`}>
-                  <div className={`p-4 rounded-sm ${idx === 0 ? 'bg-primary text-white' : 'bg-primary/10 text-primary'}`}>
+                <div className="flex items-center gap-6 mb-8 w-full border-b pb-8 border-primary/30">
+                  <div className="p-4 rounded-sm bg-primary text-white">
                     <service.icon className="w-10 h-10" />
                   </div>
-                  <h3 className={`text-2xl md:text-3xl font-bold font-heading ${idx === 0 ? 'text-primary' : 'text-white'}`}>{service.title}</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold font-heading text-primary">{service.title}</h3>
                 </div>
                 
-                <p className="text-lg text-gray-300 mb-8 font-light">
+                <p className="text-xl text-gray-300 mb-8 font-light">
                   {service.desc}
                 </p>
                 
                 <ul className="space-y-4 mb-10 mt-auto w-full">
                   {service.points.map((point, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <div className="mt-1 w-2 h-2 rounded-full bg-primary shrink-0"></div>
-                      <span className="text-gray-400">{point}</span>
+                      <div className="mt-2 w-2 h-2 rounded-full bg-primary shrink-0"></div>
+                      <span className="text-gray-400 text-lg">{point}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Link to={`/kontakt?sluzba=${service.id}`} className="w-full bg-concrete hover:bg-white hover:text-dark text-white text-center py-4 font-bold rounded-sm transition-colors border border-transparent mt-auto shadow-sm">
+                <Link to={`/kontakt?sluzba=${service.id}`} className="w-full bg-concrete hover:bg-white hover:text-dark text-white text-center py-4 text-lg font-bold rounded-sm transition-colors border border-transparent mt-auto shadow-sm">
                   Poptat tuto službu
                 </Link>
               </motion.div>
@@ -109,7 +109,7 @@ export default function Services() {
 
       {/* Unsure Box */}
       <section className="py-24 bg-dark border-t border-concrete">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-primary rounded-sm p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-[0_20px_50px_rgba(249,115,22,0.1)]">
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[length:24px_24px]"></div>
             

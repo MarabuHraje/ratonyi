@@ -15,7 +15,7 @@ import Contact from "./pages/Contact";
 function TopBar() {
   return (
     <div className="bg-primary text-white py-2 px-4 sm:px-6 lg:px-8 text-sm font-medium">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div className="max-w-[1600px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
         <div className="flex items-center gap-4">
           <a href="mailto:perat.sro@seznam.cz" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Mail className="w-4 h-4" /> perat.sro@seznam.cz
@@ -53,13 +53,10 @@ function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-anthracite/95 backdrop-blur-md border-b border-concrete">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="bg-primary p-2 rounded-lg group-hover:scale-105 transition-transform">
-              <HardHat className="w-8 h-8 text-white" />
-            </div>
-            <span className="font-heading font-bold text-2xl tracking-wider text-white">PERAT</span>
+            <img src="https://marabie.eu/images_perat/logo.svg" alt="PERAT s.r.o. Logo" className="h-24 lg:h-32 w-auto group-hover:scale-105 transition-transform" />
           </Link>
 
           {/* Desktop Nav */}
@@ -126,15 +123,12 @@ function Navbar() {
 function Footer() {
   return (
     <footer className="bg-anthracite border-t border-concrete pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="bg-primary p-2 rounded-lg">
-                <HardHat className="w-6 h-6 text-white" />
-              </div>
-              <span className="font-heading font-bold text-2xl tracking-wider text-white">PERAT</span>
+              <img src="https://marabie.eu/images_perat/logo.svg" alt="PERAT s.r.o. Logo" className="h-24 lg:h-32 w-auto" />
             </Link>
             <p className="text-gray-400 mb-6">
               Prémiové stavební služby od myšlenky po realizaci. Karlovarský kraj a okolí.
@@ -156,12 +150,17 @@ function Footer() {
               <li className="flex flex-col gap-2 text-gray-300 mt-4 border-t border-concrete pt-4">
                 <span className="text-white font-bold">Petr Rátonyi (jednatel)</span>
                 <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> <a href="tel:+420777849773" className="hover:text-primary transition-colors">+420 777 849 773</a></span>
-                <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> <a href="mailto:info@peratsro.cz" className="hover:text-primary transition-colors">info@peratsro.cz</a></span>
+                <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> <a href="mailto:perat.sro@seznam.cz" className="hover:text-primary transition-colors">perat.sro@seznam.cz</a></span>
               </li>
               <li className="flex flex-col gap-2 text-gray-300 mt-4 border-t border-concrete pt-4">
-                <span className="text-white font-bold">Kancelář</span>
+                <span className="text-white font-bold">Kancelář účetní - Hanka Karlovská</span>
+                <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> <a href="tel:+420607826122" className="hover:text-primary transition-colors">+420 607 826 122</a></span>
+                <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> <a href="mailto:hkkarlovska@seznam.cz" className="hover:text-primary transition-colors">hkkarlovska@seznam.cz</a></span>
+              </li>
+              <li className="flex flex-col gap-2 text-gray-300 mt-4 border-t border-concrete pt-4">
+                <span className="text-white font-bold">Kancelář rozpočtářka - Radka Tatíčková</span>
                 <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> <a href="tel:+420312527992" className="hover:text-primary transition-colors">+420 312 527 992</a></span>
-                <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> <a href="mailto:perat.sro@seznam.cz" className="hover:text-primary transition-colors">perat.sro@seznam.cz</a></span>
+                <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> <a href="mailto:perat.rozpocty@seznam.cz" className="hover:text-primary transition-colors">perat.rozpocty@seznam.cz</a></span>
               </li>
             </ul>
           </div>

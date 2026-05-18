@@ -15,7 +15,7 @@ export default function Contact() {
           <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-dark/20"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           
           {/* Quick contact methods (Left) */}
@@ -53,13 +53,19 @@ export default function Contact() {
                  <div className="mb-6">
                    <p className="text-gray-300 font-bold mb-1">Petr Rátonyi (jednatel)</p>
                    <p className="text-gray-400 flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420777849773" className="hover:text-primary transition-colors">777 849 773</a></p>
-                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Mail className="w-4 h-4 text-primary"/> <a href="mailto:info@peratsro.cz" className="hover:text-primary transition-colors">info@peratsro.cz</a></p>
+                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Mail className="w-4 h-4 text-primary"/> <a href="mailto:perat.sro@seznam.cz" className="hover:text-primary transition-colors">perat.sro@seznam.cz</a></p>
+                 </div>
+
+                 <div className="mb-6">
+                   <p className="text-gray-300 font-bold mb-1">Kancelář účetní - Hanka Karlovská</p>
+                   <p className="text-gray-400 flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420607826122" className="hover:text-primary transition-colors">+420 607 826 122</a></p>
+                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Mail className="w-4 h-4 text-primary"/> <a href="mailto:hkkarlovska@seznam.cz" className="hover:text-primary transition-colors break-all">hkkarlovska@seznam.cz</a></p>
                  </div>
 
                  <div>
-                   <p className="text-gray-300 font-bold mb-1">Kancelář</p>
-                   <p className="text-gray-400 flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420312527992" className="hover:text-primary transition-colors">312 527 992</a></p>
-                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Mail className="w-4 h-4 text-primary"/> <a href="mailto:perat.sro@seznam.cz" className="hover:text-primary transition-colors break-all">perat.sro@seznam.cz</a></p>
+                   <p className="text-gray-300 font-bold mb-1">Kancelář rozpočtářka - Radka Tatíčková</p>
+                   <p className="text-gray-400 flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420312527992" className="hover:text-primary transition-colors">+420 312 527 992</a></p>
+                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Mail className="w-4 h-4 text-primary"/> <a href="mailto:perat.rozpocty@seznam.cz" className="hover:text-primary transition-colors break-all">perat.rozpocty@seznam.cz</a></p>
                  </div>
                </div>
 

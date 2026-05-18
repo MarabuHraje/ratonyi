@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
-import { Phone, ArrowRight, HardHat, Home as HomeIcon, Hammer, Wrench, ShieldCheck, Clock, CheckCircle2, Star, Quote } from "lucide-react";
+import { Phone, ArrowRight, HardHat, Hammer, ShieldCheck, CheckCircle2, Star, Quote, Droplets, Home as HomeIcon, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <div className="bg-dark">
-      {/* Massive Hero Section */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-24 border-b border-concrete overflow-hidden">
         {/* Background Overlay */}
         <div className="absolute inset-0 z-0 bg-dark">
           <img 
@@ -15,28 +15,28 @@ export default function Home() {
             className="w-full h-full object-cover object-center opacity-40"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/50 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/30 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-dark/20"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 mt-10">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            className="max-w-4xl mx-auto"
           >
-            <div className="flex items-center gap-2 mb-6">
+            <div className="flex items-center justify-center gap-2 mb-6">
               <div className="h-[2px] w-12 bg-primary"></div>
               <span className="text-primary font-bold tracking-widest uppercase text-sm">Prémiové Stavební Služby</span>
+              <div className="h-[2px] w-12 bg-primary"></div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight mb-6 text-white text-balance">
+            <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight mb-8 text-white">
               Stavíme na <span className="text-primary">důvěře</span>,<br />kvalitě a rychlosti.
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl font-light text-balance">
-              Jsme PERAT s.r.o. Zajišťujeme kompletní stavební práce, rekonstrukce a fasády pro rezidenční i komerční projekty v Karlových Varech a okolí.
+            <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+              Jsme PERAT s.r.o. Zajišťujeme kompletní inženýrskou činnost, stavby vodního hospodářství, zemní a demoliční práce pro privátní i komerční projekty.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="tel:+420777849773" className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-sm font-bold text-lg flex items-center justify-center gap-3 transition-colors shadow-[0_0_20px_rgba(249,115,22,0.3)]">
                 <Phone className="w-5 h-5" /> Zavolat Nyní
               </a>
@@ -46,7 +46,7 @@ export default function Home() {
             </div>
             
             {/* Trust Badges */}
-            <div className="mt-16 flex flex-wrap items-center gap-8 text-gray-400 text-sm font-medium">
+            <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-gray-400 text-sm font-medium">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-primary" /> Certifikované postupy
               </div>
@@ -63,27 +63,25 @@ export default function Home() {
 
       {/* Services Section */}
       <section className="py-24 bg-anthracite relative z-20 border-t border-concrete">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
               <h2 className="text-primary font-bold tracking-widest uppercase text-sm flex items-center gap-2 mb-2">
-                <Wrench className="w-4 h-4"/> Naše Specializace
+                <ShieldCheck className="w-4 h-4"/> Naše Specializace
               </h2>
-              <h3 className="text-4xl md:text-5xl font-heading font-bold text-white text-balance">Kompletní stavební činnost</h3>
+              <h3 className="text-4xl md:text-5xl font-heading font-bold text-white text-balance">Kompletní řešení</h3>
             </div>
             <Link to="/sluzby" className="text-white hover:text-primary font-bold flex items-center gap-2 transition-colors shrink-0">
               Všechny služby <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "Kompletní rekonstrukce", desc: "Byty, domy a komerční prostory na klíč. Změníme váš prostor k nepoznání od podlah po stropy.", icon: HomeIcon },
-              { title: "Střechy a tesařství", desc: "Nové střešní krytiny, komplexní opravy, montáž krovů, pergoly a moderní dřevostavby.", icon: Hammer },
-              { title: "Fasády a zateplení", desc: "Snížení energetické náročnosti, moderní vzhled, kontaktní zateplovací systémy a omítky.", icon: HardHat },
-              { title: "Zednické práce", desc: "Zdění, hrubé stavby, podlahy, stěrkování, sádrokartony a další stavební úpravy.", icon: Wrench },
-              { title: "Havarijní opravy", desc: "Rychlý zásah při haváriích a urgentních problémech s vodou, statikou či střechou.", icon: ShieldCheck },
-              { title: "Demoliční práce", desc: "Řízené a bezpečné demolice s odvozem a ekologickou likvidací stavební suti.", icon: Clock },
+              { title: "Zemní práce a demolice", desc: "Veškeré terénní úpravy, výkopy a bezpečné i řízené demolice s likvidací suti.", icon: HardHat },
+              { title: "Stavby vodního hospodářství", desc: "Specializujeme se na výstavbu, údržbu a rekonstrukce vodohospodářských děl a infrastruktury.", icon: Droplets },
+              { title: "Komplexní řešení inženýrských prací", desc: "Zabezpečujeme inženýrskou činnost od prvotní studie až po předání hotového díla.", icon: ShieldCheck },
+              { title: "Stavební práce", desc: "Provádíme široké spektrum pozemních staveb od hrubých staveb až po finální dokončovací práce.", icon: HomeIcon },
             ].map((srv, idx) => (
               <motion.div 
                 key={srv.title}
@@ -96,9 +94,9 @@ export default function Home() {
                 <div className="bg-dark w-16 h-16 flex items-center justify-center rounded-sm mb-6 group-hover:bg-primary transition-colors">
                   <srv.icon className="w-8 h-8 text-primary group-hover:text-white" />
                 </div>
-                <h4 className="text-2xl font-bold font-heading mb-4 text-white group-hover:text-primary transition-colors">{srv.title}</h4>
-                <p className="text-gray-400 mb-8 leading-relaxed flex-1">{srv.desc}</p>
-                <Link to="/kontakt" className="text-white font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-auto pt-4 border-t border-white/10">
+                <h4 className="text-2xl xl:text-3xl font-bold font-heading mb-4 text-white group-hover:text-primary transition-colors">{srv.title}</h4>
+                <p className="text-gray-400 mb-8 leading-relaxed flex-1 text-lg">{srv.desc}</p>
+                <Link to="/kontakt" className="text-white text-lg font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-auto pt-4 border-t border-white/10">
                   Poptat službu <ArrowRight className="w-5 h-5 text-primary" />
                 </Link>
               </motion.div>
@@ -112,7 +110,7 @@ export default function Home() {
         {/* Subtle background element */}
         <div className="absolute right-0 top-0 w-1/3 h-1/3 bg-primary/5 blur-[150px] rounded-full pointer-events-none"></div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-primary font-bold tracking-widest uppercase text-sm flex items-center gap-2 mb-2">
@@ -171,7 +169,7 @@ export default function Home() {
 
       {/* Process Section */}
       <section className="py-24 bg-anthracite border-t border-concrete">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-2 flex items-center justify-center gap-2">
              Jak spolupracujeme
           </h2>
@@ -198,7 +196,7 @@ export default function Home() {
 
       {/* Projects Preview */}
       <section className="py-24 bg-dark relative z-20 border-t border-concrete">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
               <h2 className="text-primary font-bold tracking-widest uppercase text-sm flex items-center gap-2 mb-2">
@@ -214,24 +212,24 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Gallery items limit 3 */}
             <div className="group overflow-hidden rounded-sm relative aspect-[4/3] bg-concrete">
-               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Kompletní rekonstrukce rodinného domu" />
+               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Vodní hospodářství" />
                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6">
-                 <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Rekonstrukce</p>
-                 <h4 className="text-white text-xl font-bold font-heading">Rodinný dům na klíč</h4>
+                 <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Stavby vodního hospodářství</p>
+                 <h4 className="text-white text-xl font-bold font-heading">Úpravy vodních toků</h4>
                </div>
             </div>
             <div className="group overflow-hidden rounded-sm relative aspect-[4/3] bg-concrete">
-               <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Střecha a tesařské práce" />
+               <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Zemní práce" />
                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6">
-                 <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Střechy</p>
-                 <h4 className="text-white text-xl font-bold font-heading">Nová střecha bytového domu</h4>
+                 <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Zemní práce</p>
+                 <h4 className="text-white text-xl font-bold font-heading">Výkopy základů a jímek</h4>
                </div>
             </div>
             <div className="group overflow-hidden rounded-sm relative aspect-[4/3] bg-concrete">
-               <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2070&auto=format&fit=crop" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Renovace interiéru" />
+               <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2070&auto=format&fit=crop" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Demoliční práce" />
                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6">
-                 <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Interiéry</p>
-                 <h4 className="text-white text-xl font-bold font-heading">Komerční prostory prodejny</h4>
+                 <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Demoliční práce</p>
+                 <h4 className="text-white text-xl font-bold font-heading">Bezpečné a řízené demolice</h4>
                </div>
             </div>
           </div>
@@ -240,7 +238,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <section className="py-24 bg-anthracite border-t border-concrete">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-2 flex items-center justify-center gap-2">
              Hodnocení zákazníků
             </h2>
@@ -248,9 +246,9 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
               {[
-                { name: "Petr Novák", text: "S firmou PERAT byla vynikající spolupráce. Dodrželi termín, rozpočet a kvalita odvedené práce u rekonstrukce naší střechy je špičková. Mohu jen doporučit." },
-                { name: "Jana Dvořáková", text: "Rychlý přístup při řešení havarijní situace u nás v domě. Přijeli hned druhý den, opravili závadu a ještě poradili s dalším postupem. Skvělí profíci z Karlovarského kraje." },
-                { name: "Martin Kovář", text: "Dělali nám kompletní zateplení a novou fasádu. Nechali po sobě pořádek, komunikovali naprosto transparentně. Výsledek stojí za to." }
+                { name: "Petr Novák", text: "S firmou PERAT s.r.o. byla vynikající spolupráce. Dodrželi termín, rozpočet a kvalita odvedené práce u zemních prací pro naši halu je špičková. Mohu jen doporučit." },
+                { name: "Jana Dvořáková", text: "Potřebovali jsme rychlou demolici staré budovy u nás na pozemku. Přijeli hned druhý den s technikou, zbourali a odvezli suť. Skvělí profíci z Kladenska." },
+                { name: "Martin Kovář", text: "Zabezpečovali nám inženýring a výstavbu nové retenční nádrže. Nechali po sobě pořádek, komunikovali naprosto transparentně. Výsledek stojí za to." }
               ].map((r, i) => (
                 <div key={i} className="bg-dark p-8 border border-white/5 relative">
                   <Quote className="text-white/10 w-16 h-16 absolute top-4 right-4" />

@@ -8,16 +8,16 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const categories = ["Vše", "Rekonstrukce", "Fasády", "Střechy", "Interiéry"];
+  const categories = ["Vše", "Vodní hospodářství", "Zemní práce", "Inženýrské práce", "Demoliční práce"];
 
   const projects = [
     {
       id: 1,
-      title: "Kompletní rekonstrukce rodinného domu",
+      title: "Rekonstrukce vodního toku",
       location: "Karlovy Vary",
-      category: "Rekonstrukce",
+      category: "Vodní hospodářství",
       year: "2023",
-      desc: "Přestavba staršího rodinného domu od hrubých podlah až po novou střechu a fasádu.",
+      desc: "Komplexní zpevnění koryta, vyčištění od nánosů a úprava břehů pro vyšší průtokovou kapacitu.",
       img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
       gallery: [
         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
@@ -27,11 +27,11 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "Zateplení a fasáda bytového domu",
+      title: "Výkopové práce pro bytový dům",
       location: "Sokolov",
-      category: "Fasády",
+      category: "Zemní práce",
       year: "2023",
-      desc: "Realizace kontaktního zateplovacího systému na panelovém domě s novou silikonovou omítkou.",
+      desc: "Hloubení základové spáry, přesun zemin a finální modelace terénu pro novostavbu bytového domu.",
       img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
       gallery: [
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
@@ -40,11 +40,11 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "Nová střecha komerční budovy",
+      title: "Inženýring komerční budovy",
       location: "Ostrov",
-      category: "Střechy",
+      category: "Inženýrské práce",
       year: "2022",
-      desc: "Demontáž staré krytiny, úprava krovů a montáž nové plechové falcované krytiny.",
+      desc: "Kompletní technický dozor investora, inženýrská činnost u výstavby obchodního centra a kolaudace.",
       img: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop",
       gallery: [
         "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop",
@@ -53,11 +53,11 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: "Rekonstrukce bytového jádra",
+      title: "Demolice průmyslového areálu",
       location: "Karlovy Vary",
-      category: "Interiéry",
+      category: "Demoliční práce",
       year: "2024",
-      desc: "Vyzdění nového jádra z Ytongu, nové obklady, dlažba, elektro a vodo-topo.",
+      desc: "Strojní demolice hal včetně odvozu a ekologické likvidace veškeré sutě a srovnání a přípravy pozemku.",
       img: "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2070&auto=format&fit=crop",
       gallery: [
         "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2070&auto=format&fit=crop",
@@ -67,11 +67,11 @@ export default function Projects() {
     },
     {
       id: 5,
-      title: "Stavba dřevěné pergoly",
+      title: "Rybník a retenční nádrž",
       location: "Cheb",
-      category: "Střechy",
+      category: "Vodní hospodářství",
       year: "2023",
-      desc: "Tesařské práce na míru - návrh a montáž masivní dřevěné pergoly k rodinnému domu.",
+      desc: "Výstavba rybníka, navazující retenční i vsakovací nádrže včetně vybudování kvalitního přítoku.",
       img: "https://images.unsplash.com/photo-1587582423116-ec07293f0395?q=80&w=2070&auto=format&fit=crop",
       gallery: [
         "https://images.unsplash.com/photo-1587582423116-ec07293f0395?q=80&w=2070&auto=format&fit=crop",
@@ -80,11 +80,11 @@ export default function Projects() {
     },
     {
       id: 6,
-      title: "Půdní vestavba",
+      title: "Zarovnávání terénu a výkopy",
       location: "Karlovy Vary",
-      category: "Interiéry",
+      category: "Zemní práce",
       year: "2022",
-      desc: "Přeměna nevyužité půdy na luxusní obytný prostor vč. sádrokartonů a zateplení.",
+      desc: "Rozsáhlé zarovnávání svahu včetně hutnění na požadované parametry pro stavbu haly.",
       img: "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?q=80&w=2070&auto=format&fit=crop",
       gallery: [
         "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?q=80&w=2070&auto=format&fit=crop",
@@ -140,7 +140,7 @@ export default function Projects() {
           <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-dark/20"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -159,7 +159,7 @@ export default function Projects() {
 
       {/* Projects Gallery */}
       <section className="py-24 bg-anthracite">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
