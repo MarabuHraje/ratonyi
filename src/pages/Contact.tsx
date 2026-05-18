@@ -145,9 +145,9 @@ export default function Contact() {
 
             {/* Area Map */}
             <div className="bg-anthracite border border-concrete p-2 rounded-sm relative overflow-hidden flex flex-col h-[400px]">
-               <div className="absolute inset-0 z-0 opacity-80 mix-blend-luminosity pointer-events-none">
+               <div className="absolute inset-0 z-0">
                  <iframe 
-                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163273.8043657755!2d12.721473215849896!3d50.23072210408544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0a7eb51336c13%3A0x400af0f661556a0!2sKarlovy%20Vary!5e0!3m2!1sen!2scz!4v1700000000000!5m2!1sen!2scz" 
+                   src="https://maps.google.com/maps?q=Karlovarsk%C3%A1%208,%20273%2051%20Pavlov&t=&z=13&ie=UTF8&iwloc=&output=embed"
                    width="100%" 
                    height="100%" 
                    style={{ border: 0 }} 

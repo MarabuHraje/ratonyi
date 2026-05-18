@@ -9,14 +9,14 @@ export default function Services() {
       icon: HardHat,
       title: "Zemní práce a demolice",
       desc: "Veškeré terénní úpravy, výkopy a bezpečné i řízené demolice s likvidací suti.",
-      points: ["Výkopy základů a jímek", "Modelace a zarovnávání terénu", "Strojní i ruční demolice", "Odvoz suti a zemin"]
+      points: ["Výkopy základů, jímek a bazénů", "Modelace a zarovnávání terénu", "Strojní i ruční demolice", "Odvoz suti a zemin"]
     },
     {
       id: "vodni-prace",
       icon: Droplets,
       title: "Stavby vodního hospodářství",
       desc: "Specializujeme se na výstavbu, údržbu a rekonstrukce vodohospodářských děl a infrastruktury.",
-      points: ["Úpravy vodních toků", "Rybníky a vodní nádrže", "Kanalizace a vodovody", "Protierozní opatření"]
+      points: ["Kanalizace a vodovody", "Realizace retencních nádrží", "Vodní nádrže, čistírny odpadních vod", "Protierozní opatření"]
     },
     {
       id: "komplexni-reseni-inzenyrskych-praci",
@@ -30,7 +30,7 @@ export default function Services() {
       icon: Home,
       title: "Stavební práce",
       desc: "Provádíme široké spektrum pozemních staveb od hrubých staveb až po finální dokončovací práce.",
-      points: ["Hrubé stavby a vyzdívky", "Základové desky a betonáže", "Rekonstrukce a modernizace", "Dokončovací práce"]
+      points: ["Základové desky a betonáže", "Výstavba plotů a zámkové dlažby", "Rekonstrukce a modernizace", "Dokončovací práce"]
     }
   ];
 

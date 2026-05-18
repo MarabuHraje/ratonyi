@@ -131,7 +131,7 @@ function Footer() {
               <img src="https://marabie.eu/images_perat/logo.svg" alt="PERAT s.r.o. Logo" className="h-24 lg:h-32 w-auto" />
             </Link>
             <p className="text-gray-400 mb-6">
-              Prémiové stavební služby od myšlenky po realizaci. Karlovarský kraj a okolí.
+              Prémiové stavební služby od myšlenky po realizaci. Středočeský kraj a okolí.
             </p>
             <div className="text-gray-400 text-sm">
               <p>IČO: 27955460</p>

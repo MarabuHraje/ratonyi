@@ -159,7 +159,7 @@ export default function Home() {
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 bg-primary p-8 z-20 shadow-xl max-w-[250px] outline outline-8 outline-dark">
-                <div className="text-white font-heading font-bold text-5xl mb-2">10+</div>
+                <div className="text-white font-heading font-bold text-5xl mb-2">20+</div>
                 <div className="text-white/90 font-medium">Let zkušeností v oboru stavebnictví</div>
               </div>
             </div>

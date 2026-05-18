@@ -88,8 +88,8 @@ export default function About() {
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
              {[
-               { val: "10+", label: "Let na trhu" },
-               { val: "150+", label: "Úspěšných projektů" },
+               { val: "20+", label: "Let na trhu" },
+               { val: "300+", label: "Úspěšných projektů" },
                { val: "100%", label: "Dodržení termínů" },
                { val: "24/7", label: "Odborná podpora" }
              ].map((s, i) => (
