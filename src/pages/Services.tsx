@@ -16,7 +16,7 @@ export default function Services() {
       icon: Droplets,
       title: "Stavby vodního hospodářství",
       desc: "Specializujeme se na výstavbu, údržbu a rekonstrukce vodohospodářských děl a infrastruktury.",
-      points: ["Kanalizace a vodovody", "Realizace retencních nádrží", "Vodní nádrže, čistírny odpadních vod", "Protierozní opatření"]
+      points: ["Kanalizace a vodovody", "Realizace retenčních nádrží", "Vodní nádrže, čistírny odpadních vod", "Protierozní opatření"]
     },
     {
       id: "komplexni-reseni-inzenyrskych-praci",

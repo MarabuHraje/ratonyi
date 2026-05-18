@@ -74,7 +74,7 @@ export default function About() {
             
             <div className="relative">
               <div className="aspect-square md:aspect-[4/3] relative rounded-sm overflow-hidden z-10 border border-white/5">
-                <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop" alt="Stavební proces" className="w-full h-full object-cover" />
+                <img src="https://marabie.eu/images_perat/IMG_3717.jpeg" alt="Stavební proces" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -right-6 w-full h-full bg-primary/10 border-2 border-primary z-0 rounded-sm"></div>
             </div>
