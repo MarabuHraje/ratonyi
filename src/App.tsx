@@ -150,11 +150,13 @@ function Footer() {
               <li className="flex flex-col gap-2 text-gray-300 mt-4 border-t border-concrete pt-4">
                 <span className="text-white font-bold">Petr Rátonyi (jednatel)</span>
                 <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> <a href="tel:+420777849773" className="hover:text-primary transition-colors">+420 777 849 773</a></span>
+                <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> <a href="tel:+420312527992" className="hover:text-primary transition-colors">+420 312 527 992</a></span>
                 <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> <a href="mailto:perat.sro@seznam.cz" className="hover:text-primary transition-colors">perat.sro@seznam.cz</a></span>
               </li>
               <li className="flex flex-col gap-2 text-gray-300 mt-4 border-t border-concrete pt-4">
                 <span className="text-white font-bold">Kancelář účetní - Hanka Karlovská</span>
                 <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> <a href="tel:+420607826122" className="hover:text-primary transition-colors">+420 607 826 122</a></span>
+                <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> <a href="tel:+420312527992" className="hover:text-primary transition-colors">+420 312 527 992</a></span>
                 <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> <a href="mailto:hkkarlovska@seznam.cz" className="hover:text-primary transition-colors">hkkarlovska@seznam.cz</a></span>
               </li>
               <li className="flex flex-col gap-2 text-gray-300 mt-4 border-t border-concrete pt-4">

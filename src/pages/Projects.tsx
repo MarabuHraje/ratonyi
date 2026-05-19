@@ -123,11 +123,30 @@ export default function Projects() {
     },
     {
       id: 11,
-      title: "Projekt v přípravě",
+      title: "Výstavba garáže a monolitového stropu",
       category: "Stavební práce",
-      desc: "Fotodokumentace se připravuje.",
-      img: "",
-      gallery: []
+      desc: "Kompletní realizace výstavby garáže včetně betonáže monolitového stropu.",
+      img: "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.06.jpeg",
+      gallery: [
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.06.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%285%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%286%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%287%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%288%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%289%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%2810%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%2811%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%2812%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%2813%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%2814%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%2815%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07%20%2816%29.jpeg",
+        "https://marabie.eu/images_perat/garaz/WhatsApp%20Image%202026-05-19%20at%2016.02.07.jpeg"
+      ]
     },
     {
       id: 12,
