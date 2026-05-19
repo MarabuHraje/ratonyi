@@ -163,7 +163,6 @@ export default function Projects() {
         "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.22%20%286%29.jpeg",
         "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.22.jpeg",
         "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%281%29.jpeg",
-        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%2810%29.jpeg",
         "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%2811%29.jpeg",
         "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%2812%29.jpeg",
         "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%282%29.jpeg",
