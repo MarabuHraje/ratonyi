@@ -13,29 +13,55 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Rekonstrukce vodního toku",
-      location: "Karlovy Vary",
+      title: "Hospodaření se srážkovými vodami",
+      location: "Domov u Anežky, Benátky nad Jizerou",
       category: "Vodní hospodářství",
-      year: "2023",
       desc: "Komplexní zpevnění koryta, vyčištění od nánosů a úprava břehů pro vyšší průtokovou kapacitu.",
-      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
+      img: "https://marabie.eu/images_perat/domov_u_anezky_benatky.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070&auto=format&fit=crop"
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.03%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.03%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.03.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.05%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.05.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%285%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%286%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%287%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.07%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.07%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.07%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.07.jpeg"
       ]
     },
     {
       id: 3,
-      title: "Inženýring komerční budovy",
-      location: "Ostrov",
-      category: "Inženýrské práce",
-      year: "2022",
-      desc: "Kompletní technický dozor investora, inženýrská činnost u výstavby obchodního centra a kolaudace.",
-      img: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop",
+      title: "Hospodaření se srážkovými vodami",
+      location: "Benátky nad Jizerou, zimní stadion",
+      category: "Vodní hospodářství",
+      desc: "Komplexní řešení hospodaření se srážkovými vodami pro areál zimního stadionu.",
+      img: "https://marabie.eu/images_perat/zimni_stadion.JPG",
       gallery: [
-        "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2070&auto=format&fit=crop"
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.16.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.19%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.19%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.19%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.19%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.19%20%285%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.19.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%285%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%286%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%287%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%288%29.jpeg",
+        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20.jpeg"
       ]
     },
     {
@@ -60,7 +86,6 @@ export default function Projects() {
       title: "Rybník a retenční nádrž",
       location: "Cheb",
       category: "Vodní hospodářství",
-      year: "2023",
       desc: "Výstavba rybníka, navazující retenční i vsakovací nádrže včetně vybudování kvalitního přítoku.",
       img: "https://images.unsplash.com/photo-1587582423116-ec07293f0395?q=80&w=2070&auto=format&fit=crop",
       gallery: [
@@ -73,7 +98,6 @@ export default function Projects() {
       title: "Zarovnávání terénu a výkopy",
       location: "Karlovy Vary",
       category: "Zemní práce",
-      year: "2022",
       desc: "Rozsáhlé zarovnávání svahu včetně hutnění na požadované parametry pro stavbu haly.",
       img: "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?q=80&w=2070&auto=format&fit=crop",
       gallery: [
