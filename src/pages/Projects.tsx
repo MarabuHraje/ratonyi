@@ -150,11 +150,32 @@ export default function Projects() {
     },
     {
       id: 12,
-      title: "Projekt v přípravě",
+      title: "Oprava stodoly",
       category: "Stavební práce",
-      desc: "Fotodokumentace se připravuje.",
-      img: "",
-      gallery: []
+      desc: "Kompletní oprava a rekonstrukce stodoly.",
+      img: "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.22%20%281%29.jpeg",
+      gallery: [
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.22%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.22%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.22%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.22%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.22%20%285%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.22%20%286%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.22.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%2810%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%2811%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%2812%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%285%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%286%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%287%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%288%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23%20%289%29.jpeg",
+        "https://marabie.eu/images_perat/stodola/WhatsApp%20Image%202026-05-19%20at%2016.57.23.jpeg"
+      ]
     },
     {
       id: 13,
