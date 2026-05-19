@@ -52,15 +52,15 @@ export default function Contact() {
                  
                  <div className="mb-6">
                    <p className="text-gray-300 font-bold mb-1">Petr Rátonyi (jednatel)</p>
-                   <p className="text-gray-400 flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420777849773" className="hover:text-primary transition-colors">777 849 773</a></p>
-                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420312527992" className="hover:text-primary transition-colors">312 527 992</a></p>
+                   <p className="text-gray-400 flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420777849773" className="hover:text-primary transition-colors">+420 777 849 773</a></p>
+                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420312527992" className="hover:text-primary transition-colors">+420 312 527 992</a></p>
                    <p className="text-gray-400 flex items-center gap-2 mt-1"><Mail className="w-4 h-4 text-primary"/> <a href="mailto:perat.sro@seznam.cz" className="hover:text-primary transition-colors">perat.sro@seznam.cz</a></p>
                  </div>
 
                  <div className="mb-6">
                    <p className="text-gray-300 font-bold mb-1">Kancelář účetní - Hanka Karlovská</p>
                    <p className="text-gray-400 flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420607826122" className="hover:text-primary transition-colors">+420 607 826 122</a></p>
-                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420312527992" className="hover:text-primary transition-colors">312 527 992</a></p>
+                   <p className="text-gray-400 flex items-center gap-2 mt-1"><Phone className="w-4 h-4 text-primary"/> <a href="tel:+420312527992" className="hover:text-primary transition-colors">+420 312 527 992</a></p>
                    <p className="text-gray-400 flex items-center gap-2 mt-1"><Mail className="w-4 h-4 text-primary"/> <a href="mailto:hkkarlovska@seznam.cz" className="hover:text-primary transition-colors break-all">hkkarlovska@seznam.cz</a></p>
                  </div>
 
