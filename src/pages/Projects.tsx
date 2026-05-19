@@ -99,19 +99,54 @@ export default function Projects() {
     },
     {
       id: 8,
-      title: "Projekt v přípravě",
+      title: "Přípojka plynu",
       category: "Komplexní řešení inženýrských prací",
-      desc: "Fotodokumentace se připravuje.",
-      img: "",
-      gallery: []
+      desc: "Kompletní realizace plynové přípojky.",
+      img: "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.19%20%281%29.jpeg",
+      gallery: [
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.19%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.19%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.19%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.19%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.19%20%285%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.19%20%286%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.19%20%287%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.19.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.20%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.20%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.20%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.20%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/pripojka_plynu/WhatsApp%20Image%202026-05-19%20at%2017.22.20.jpeg"
+      ]
     },
     {
       id: 9,
-      title: "Projekt v přípravě",
+      title: "Vysoké napětí trafostanice délka 1km",
       category: "Komplexní řešení inženýrských prací",
-      desc: "Fotodokumentace se připravuje.",
-      img: "",
-      gallery: []
+      desc: "Realizace vysokého napětí pro trafostanici v délce 1 km.",
+      img: "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.30.jpeg",
+      gallery: [
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.30.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.31%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.31%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.31.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.32.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%2810%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%2811%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%2812%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%285%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%286%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%287%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%288%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34%20%289%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.34.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.35%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.35.jpeg"
+      ]
     },
     {
       id: 10,
