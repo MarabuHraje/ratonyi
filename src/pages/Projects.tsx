@@ -8,7 +8,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const categories = ["Vše", "Stavby vodního hospodářství", "Zemní práce a demolice", "Komplexní řešení inženýrských prací"];
+  const categories = ["Vše", "Stavby vodního hospodářství", "Zemní práce a demolice", "Komplexní řešení inženýrských prací", "Stavební práce"];
 
   const projects = [
     {
@@ -85,11 +85,8 @@ export default function Projects() {
       location: "Cheb",
       category: "Stavby vodního hospodářství",
       desc: "Výstavba rybníka, navazující retenční i vsakovací nádrže včetně vybudování kvalitního přítoku.",
-      img: "https://images.unsplash.com/photo-1587582423116-ec07293f0395?q=80&w=2070&auto=format&fit=crop",
-      gallery: [
-        "https://images.unsplash.com/photo-1587582423116-ec07293f0395?q=80&w=2070&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070&auto=format&fit=crop"
-      ]
+      img: "",
+      gallery: []
     },
     {
       id: 6,
@@ -97,11 +94,56 @@ export default function Projects() {
       location: "Karlovy Vary",
       category: "Zemní práce a demolice",
       desc: "Rozsáhlé zarovnávání svahu včetně hutnění na požadované parametry pro stavbu haly.",
-      img: "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?q=80&w=2070&auto=format&fit=crop",
-      gallery: [
-        "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?q=80&w=2070&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop"
-      ]
+      img: "",
+      gallery: []
+    },
+    {
+      id: 8,
+      title: "Projekt v přípravě",
+      category: "Komplexní řešení inženýrských prací",
+      desc: "Fotodokumentace se připravuje.",
+      img: "",
+      gallery: []
+    },
+    {
+      id: 9,
+      title: "Projekt v přípravě",
+      category: "Komplexní řešení inženýrských prací",
+      desc: "Fotodokumentace se připravuje.",
+      img: "",
+      gallery: []
+    },
+    {
+      id: 10,
+      title: "Projekt v přípravě",
+      category: "Komplexní řešení inženýrských prací",
+      desc: "Fotodokumentace se připravuje.",
+      img: "",
+      gallery: []
+    },
+    {
+      id: 11,
+      title: "Projekt v přípravě",
+      category: "Stavební práce",
+      desc: "Fotodokumentace se připravuje.",
+      img: "",
+      gallery: []
+    },
+    {
+      id: 12,
+      title: "Projekt v přípravě",
+      category: "Stavební práce",
+      desc: "Fotodokumentace se připravuje.",
+      img: "",
+      gallery: []
+    },
+    {
+      id: 13,
+      title: "Projekt v přípravě",
+      category: "Stavební práce",
+      desc: "Fotodokumentace se připravuje.",
+      img: "",
+      gallery: []
     }
   ];
 
@@ -202,13 +244,18 @@ export default function Projects() {
                 className="group relative overflow-hidden bg-dark border border-concrete rounded-sm aspect-[4/5] flex flex-col cursor-pointer"
               >
                 {/* Image Background */}
-                <div className="absolute inset-0 z-0">
-                  <img 
-                    src={project.img} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
-                    loading="lazy"
-                  />
+                <div className="absolute inset-0 z-0 bg-concrete">
+                  {project.img && (
+                    <img 
+                      src={project.img} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                      loading="lazy"
+                    />
+                  )}
+                  {!project.img && (
+                    <div className="w-full h-full opacity-30 bg-primary/20 transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: "radial-gradient(#ff6b00 1px, transparent 1px)", backgroundSize: "20px 20px" }}></div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent opacity-90"></div>
                 </div>
 
@@ -296,15 +343,31 @@ export default function Projects() {
                   ></iframe>
                 ) : (
                   <>
-                    <motion.img
-                      key={currentImageIndex}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
-                      src={selectedProject.gallery[currentImageIndex]}
-                      alt={`${selectedProject.title} - foto ${currentImageIndex + 1}`}
-                      className="w-full h-full object-contain"
-                    />
+                    {(selectedProject.gallery && selectedProject.gallery.length > 0) ? (
+                      <motion.img
+                        key={currentImageIndex}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                        src={selectedProject.gallery[currentImageIndex]}
+                        alt={`${selectedProject.title} - foto ${currentImageIndex + 1}`}
+                        className="w-full h-full object-contain"
+                      />
+                    ) : selectedProject.img ? (
+                      <motion.img
+                        key="main-img"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                        src={selectedProject.img}
+                        alt={`${selectedProject.title} - hlavní foto`}
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-dark/50">
+                        <p className="text-gray-400 font-medium tracking-widest uppercase">Fotodokumentace se připravuje</p>
+                      </div>
+                    )}
 
                     {selectedProject.gallery && selectedProject.gallery.length > 1 && (
                       <>
