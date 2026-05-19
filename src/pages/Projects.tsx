@@ -8,14 +8,14 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const categories = ["Vše", "Vodní hospodářství", "Zemní práce", "Inženýrské práce", "Demoliční práce"];
+  const categories = ["Vše", "Stavby vodního hospodářství", "Zemní práce a demolice", "Komplexní řešení inženýrských prací"];
 
   const projects = [
     {
       id: 1,
       title: "Hospodaření se srážkovými vodami",
       location: "Domov u Anežky, Benátky nad Jizerou",
-      category: "Vodní hospodářství",
+      category: "Stavby vodního hospodářství",
       desc: "Komplexní zpevnění koryta, vyčištění od nánosů a úprava břehů pro vyšší průtokovou kapacitu.",
       img: "https://marabie.eu/images_perat/domov_u_anezky_benatky.jpg",
       gallery: [
@@ -27,7 +27,6 @@ export default function Projects() {
         "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%281%29.jpeg",
         "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%282%29.jpeg",
         "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%283%29.jpeg",
-        "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%284%29.jpeg",
         "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%285%29.jpeg",
         "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%286%29.jpeg",
         "https://marabie.eu/images_perat/domov_u_anezky_benatky/WhatsApp%20Image%202026-05-18%20at%2014.27.06%20%287%29.jpeg",
@@ -42,7 +41,7 @@ export default function Projects() {
       id: 3,
       title: "Hospodaření se srážkovými vodami",
       location: "Benátky nad Jizerou, zimní stadion",
-      category: "Vodní hospodářství",
+      category: "Stavby vodního hospodářství",
       desc: "Komplexní řešení hospodaření se srážkovými vodami pro areál zimního stadionu.",
       img: "https://marabie.eu/images_perat/zimni_stadion.JPG",
       gallery: [
@@ -54,7 +53,6 @@ export default function Projects() {
         "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.19%20%285%29.jpeg",
         "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.19.jpeg",
         "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%281%29.jpeg",
-        "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%282%29.jpeg",
         "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%283%29.jpeg",
         "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%284%29.jpeg",
         "https://marabie.eu/images_perat/zimni_stadion/WhatsApp%20Image%202026-05-19%20at%2012.52.20%20%285%29.jpeg",
@@ -68,7 +66,7 @@ export default function Projects() {
       id: 4,
       title: "Demolice v areálu MŠ Kladno",
       location: "MŠ Kladno",
-      category: "Demoliční práce",
+      category: "Zemní práce a demolice",
       desc: "Kompletní asanace objektu s důrazem na maximální vytřídění stavebního odpadu před recyklací a ekologickou likvidací.",
       img: "https://img.youtube.com/vi/zqdQZmA5BIo/maxresdefault.jpg",
       videoId: "zqdQZmA5BIo"
@@ -76,7 +74,7 @@ export default function Projects() {
     {
       id: 7,
       title: "Demolice průmyslové budovy",
-      category: "Demoliční práce",
+      category: "Zemní práce a demolice",
       desc: "Rozsáhlá demolice průmyslového objektu s využitím těžké techniky. Efektivní a rychlé odstranění suti.",
       img: "https://img.youtube.com/vi/tH5tRs8Qvsc/hqdefault.jpg",
       videoId: "tH5tRs8Qvsc"
@@ -85,7 +83,7 @@ export default function Projects() {
       id: 5,
       title: "Rybník a retenční nádrž",
       location: "Cheb",
-      category: "Vodní hospodářství",
+      category: "Stavby vodního hospodářství",
       desc: "Výstavba rybníka, navazující retenční i vsakovací nádrže včetně vybudování kvalitního přítoku.",
       img: "https://images.unsplash.com/photo-1587582423116-ec07293f0395?q=80&w=2070&auto=format&fit=crop",
       gallery: [
@@ -97,7 +95,7 @@ export default function Projects() {
       id: 6,
       title: "Zarovnávání terénu a výkopy",
       location: "Karlovy Vary",
-      category: "Zemní práce",
+      category: "Zemní práce a demolice",
       desc: "Rozsáhlé zarovnávání svahu včetně hutnění na požadované parametry pro stavbu haly.",
       img: "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?q=80&w=2070&auto=format&fit=crop",
       gallery: [

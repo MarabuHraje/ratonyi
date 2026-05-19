@@ -73,7 +73,7 @@ export default function About() {
             </motion.div>
             
             <div className="relative">
-              <div className="aspect-square md:aspect-[4/3] relative rounded-sm overflow-hidden z-10 border-4 border-primary shadow-xl">
+              <div className="aspect-square md:aspect-[4/3] relative rounded-sm overflow-hidden z-10 border-8 border-primary shadow-2xl">
                 <img src="https://marabie.eu/images_perat/IMG_3717.jpeg" alt="Stavební proces" className="w-full h-full object-cover" />
               </div>
             </div>

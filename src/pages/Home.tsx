@@ -150,9 +150,9 @@ export default function Home() {
             </div>
             
             <div className="relative">
-              <div className="aspect-[4/5] bg-concrete relative z-10 p-2 overflow-hidden border border-white/5 shadow-2xl">
+              <div className="aspect-video bg-concrete relative z-10 p-2 overflow-hidden border border-white/5 shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1931&auto=format&fit=crop" 
+                  src="https://marabie.eu/images_perat/projekty.jpeg" 
                   alt="Stavba a architektura" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
                   loading="lazy"
