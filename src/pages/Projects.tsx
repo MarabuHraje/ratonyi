@@ -231,10 +231,11 @@ export default function Projects() {
     },
     {
       id: 13,
-      title: "Projekt v přípravě",
+      title: "Betonáž lodi",
       category: "Stavební práce",
-      desc: "Fotodokumentace se připravuje.",
-      img: "",
+      desc: "Záznam z betonáže lodi.",
+      img: "https://img.youtube.com/vi/VNkPsLWz7lM/maxresdefault.jpg",
+      videoId: "VNkPsLWz7lM",
       gallery: []
     }
   ];

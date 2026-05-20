@@ -34,7 +34,7 @@ export default function Home() {
               Stavíme na <span className="text-primary">důvěře</span>,<br />kvalitě a rychlosti.
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-              Jsme PERAT s.r.o. Zajišťujeme kompletní inženýrskou činnost, stavby vodního hospodářství, zemní a demoliční práce pro privátní i komerční projekty.
+              Jsme <span className="text-primary">PERAT s.r.o.</span> Zajišťujeme kompletní inženýrskou činnost, stavby vodního hospodářství, zemní a demoliční práce pro privátní i komerční projekty.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="tel:+420777849773" className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-sm font-bold text-lg flex items-center justify-center gap-3 transition-colors shadow-[0_0_20px_rgba(249,115,22,0.3)]">
@@ -117,7 +117,7 @@ export default function Home() {
                 <ShieldCheck className="w-4 h-4"/> Naše Hodnoty
               </h2>
               <h3 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 leading-tight">
-                Proč si vybrat výhradně PERAT s.r.o.
+                Proč si vybrat výhradně <span className="text-primary">PERAT s.r.o.</span>
               </h3>
               <p className="text-gray-400 text-lg mb-8">
                 Stavíme na pevných základech - a to nielen doslova. Naše firma si zakládá na osobním přístupu, absolutní preciznosti a dodržování dohodnutých termínů i rozpočtů.
@@ -214,22 +214,19 @@ export default function Home() {
             <div className="group overflow-hidden rounded-sm relative aspect-[4/3] bg-concrete">
                <img src="https://marabie.eu/images_perat/zimni_stadion.JPG" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Vodní hospodářství" />
                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6">
-                 <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Stavby vodního hospodářství</p>
-                 <h4 className="text-white text-xl font-bold font-heading">Úpravy vodních toků</h4>
+                 <p className="text-primary font-bold text-sm uppercase tracking-wider">Stavby vodního hospodářství</p>
                </div>
             </div>
             <div className="group overflow-hidden rounded-sm relative aspect-[4/3] bg-concrete">
-               <img src="https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.30.jpeg" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Zemní práce" />
+               <img src="https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.30.jpeg" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Komplexní řešení inženýrských prací" />
                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6">
-                 <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Zemní práce</p>
-                 <h4 className="text-white text-xl font-bold font-heading">Výkopy základů a jímek</h4>
+                 <p className="text-primary font-bold text-sm uppercase tracking-wider">Komplexní řešení inženýrských prací</p>
                </div>
             </div>
             <div className="group overflow-hidden rounded-sm relative aspect-[4/3] bg-concrete">
                <img src="https://img.youtube.com/vi/zqdQZmA5BIo/maxresdefault.jpg" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Demoliční práce" />
                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6">
-                 <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Demoliční práce</p>
-                 <h4 className="text-white text-xl font-bold font-heading">Bezpečné a řízené demolice</h4>
+                 <p className="text-primary font-bold text-sm uppercase tracking-wider">Demoliční práce</p>
                </div>
             </div>
           </div>

@@ -46,7 +46,7 @@ export default function About() {
                whileInView={{ opacity: 1, x: 0 }}
                viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">PERAT s.r.o. - Vaše lokální stavební firma</h2>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6"><span className="text-primary">PERAT s.r.o.</span> - Vaše lokální stavební firma</h2>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Náš příběh začal touhou dělat řemeslo poctivě a jinak. Jsme moderní stavební firma se sídlem v Pavlově u Kladna. Za naší prací si pevně stojíme. Spojujeme tradiční stavební postupy s moderními technologiemi a materiály, abychom pro vás vytvořili dílo, které přetrvá generace.
               </p>
@@ -72,8 +72,12 @@ export default function About() {
               </div>
             </motion.div>
             
-            <div className="relative">
-              <div className="aspect-square md:aspect-[4/3] relative rounded-sm overflow-hidden z-10 border-8 border-primary shadow-2xl">
+            <div className="relative mt-8 lg:mt-0 pr-6 pb-6">
+              {/* 3D Stack effects (bottom right) */}
+              <div className="absolute top-6 left-6 right-0 bottom-0 bg-concrete border border-primary/30 rounded-sm z-0 opacity-80 backdrop-blur-sm"></div>
+              <div className="absolute top-3 left-3 right-3 bottom-3 bg-anthracite border border-primary/60 rounded-sm z-0 opacity-90 backdrop-blur-sm"></div>
+              
+              <div className="aspect-square md:aspect-[4/3] relative rounded-sm overflow-hidden z-10 border-8 border-primary shadow-2xl bg-dark">
                 <img src="https://marabie.eu/images_perat/IMG_3717.jpeg" alt="Stavební proces" className="w-full h-full object-cover" />
               </div>
             </div>
