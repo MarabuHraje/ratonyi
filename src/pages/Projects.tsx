@@ -150,11 +150,20 @@ export default function Projects() {
     },
     {
       id: 10,
-      title: "Projekt v přípravě",
+      title: "Nakládání s podzemními vodami",
       category: "Komplexní řešení inženýrských prací",
-      desc: "Fotodokumentace se připravuje.",
-      img: "",
-      gallery: []
+      desc: "Komplexní řešení nakládání s podzemními vodami.",
+      img: "https://marabie.eu/images_perat/nakladni_pod_vod/WhatsApp%20Image%202026-05-19%20at%2021.55.06%20%281%29.jpeg",
+      gallery: [
+        "https://marabie.eu/images_perat/nakladni_pod_vod/WhatsApp%20Image%202026-05-19%20at%2021.55.06%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/nakladni_pod_vod/WhatsApp%20Image%202026-05-19%20at%2021.55.06%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/nakladni_pod_vod/WhatsApp%20Image%202026-05-19%20at%2021.55.06%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/nakladni_pod_vod/WhatsApp%20Image%202026-05-19%20at%2021.55.06%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/nakladni_pod_vod/WhatsApp%20Image%202026-05-19%20at%2021.55.06%20%285%29.jpeg",
+        "https://marabie.eu/images_perat/nakladni_pod_vod/WhatsApp%20Image%202026-05-19%20at%2021.55.06.jpeg",
+        "https://marabie.eu/images_perat/nakladni_pod_vod/WhatsApp%20Image%202026-05-19%20at%2021.55.07%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/nakladni_pod_vod/WhatsApp%20Image%202026-05-19%20at%2021.55.07.jpeg"
+      ]
     },
     {
       id: 11,
