@@ -102,25 +102,58 @@ export default function Contact() {
               <h3 className="text-3xl font-bold mb-2 font-heading text-white">Nezávazná poptávka</h3>
               <p className="text-gray-400 mb-8">Poptáváte rekonstrukci, opravu nebo jen ceník? Vyplňte formulář níže.</p>
               
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const formData = new FormData(form);
+                const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+                const originalText = submitButton?.innerHTML || '';
+                
+                if (submitButton) {
+                  submitButton.disabled = true;
+                  submitButton.innerHTML = 'Odesílám...';
+                }
+
+                try {
+                  const response = await fetch('/send.php', {
+                    method: 'POST',
+                    body: formData,
+                  });
+                  const result = await response.json();
+                  
+                  if (result.status === 'success') {
+                    alert('Zpráva byla úspěšně odeslána.');
+                    form.reset();
+                  } else {
+                    alert(result.message || 'Chyba při odesílání.');
+                  }
+                } catch (error) {
+                  alert('Odeslání se nepodařilo. Zkuste to prosím znovu.');
+                } finally {
+                  if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalText;
+                  }
+                }
+              }}>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                    <div>
                      <label className="block text-sm font-medium text-gray-400 mb-2">Jméno a příjmení *</label>
-                     <input type="text" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Jan Novák" required />
+                     <input type="text" name="name" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Jan Novák" required />
                    </div>
                    <div>
                      <label className="block text-sm font-medium text-gray-400 mb-2">Telefon *</label>
-                     <input type="tel" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="+420" required />
+                     <input type="tel" name="phone" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="+420" required />
                    </div>
                  </div>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-400 mb-2">E-mail</label>
-                      <input type="email" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="email@domena.cz" />
+                      <input type="email" name="email" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="email@domena.cz" required />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-400 mb-2">Typ služby</label>
-                      <select className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-gray-300 focus:outline-none focus:border-primary transition-colors appearance-none">
+                      <select name="service_type" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-gray-300 focus:outline-none focus:border-primary transition-colors appearance-none">
                         <option>Zvolte, o co máte zájem</option>
                         <option>Kompletní rekonstrukce</option>
                         <option>Střechy a tesařství</option>
@@ -133,7 +166,7 @@ export default function Contact() {
                  
                  <div>
                    <label className="block text-sm font-medium text-gray-400 mb-2">Popis projektu / zpráva *</label>
-                   <textarea rows={5} className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Kde se stavba nachází, jaký je přibližný rozsah prací?" required></textarea>
+                   <textarea name="message" rows={5} className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Kde se stavba nachází, jaký je přibližný rozsah prací?" required></textarea>
                  </div>
                  <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-sm text-lg transition-colors flex justify-center items-center gap-2">
                    Odeslat poptávku <ArrowRight className="w-5 h-5"/>

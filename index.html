@@ -1,21 +1,60 @@
 <!doctype html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PERAT s.r.o. - Stavební, zemní a inženýrské práce</title>
-    <meta name="description" content="Kompletní stavební, vodohospodářské, zemní a demoliční práce. Profesionální řešení inženýrských prací a spolehlivost s tradicí." />
-    <meta name="keywords" content="stavební činnost, zemní práce, demolice, vodní hospodářství, inženýrské práce, stavební firma, PERAT s.r.o." />
-    <meta name="author" content="PERAT s.r.o." />
-    <meta property="og:title" content="PERAT s.r.o. - Stavební, zemní a inženýrské práce" />
-    <meta property="og:description" content="Kompletní stavební, vodohospodářské, zemní a demoliční práce. Profesionální řešení inženýrských prací a spolehlivost s tradicí." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://peratsro.cz/" />
-    <link rel="canonical" href="https://peratsro.cz/" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kontaktní formulář</title>
+</head>
+<body>
+  <h1>Kontaktní formulář</h1>
 
+  <form id="contactForm" action="send.php" method="post">
+    <div>
+      <label for="name">Jméno *</label><br>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div>
+      <label for="email">E-mail *</label><br>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div>
+      <label for="message">Zpráva</label><br>
+      <textarea id="message" name="message" rows="5"></textarea>
+    </div>
+
+    <div>
+      <button type="submit">Odeslat zprávu</button>
+    </div>
+  </form>
+
+  <p id="formStatus" role="status"></p>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      statusEl.textContent = 'Odesílám...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+        });
+        const result = await response.json();
+
+        statusEl.textContent = result.message || 'Hotovo.';
+
+        if (result.status === 'success') {
+          form.reset();
+        }
+      } catch (error) {
+        statusEl.textContent = 'Odeslání se nepodařilo. Zkuste to prosím znovu.';
+      }
+    });
+  </script>
+</body>
+</html>
