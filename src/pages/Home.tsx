@@ -212,21 +212,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Gallery items limit 3 */}
             <div className="group overflow-hidden rounded-sm relative aspect-[4/3] bg-concrete">
-               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Vodní hospodářství" />
+               <img src="https://marabie.eu/images_perat/zimni_stadion.JPG" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Vodní hospodářství" />
                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6">
                  <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Stavby vodního hospodářství</p>
                  <h4 className="text-white text-xl font-bold font-heading">Úpravy vodních toků</h4>
                </div>
             </div>
             <div className="group overflow-hidden rounded-sm relative aspect-[4/3] bg-concrete">
-               <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Zemní práce" />
+               <img src="https://marabie.eu/images_perat/trafo/WhatsApp%20Image%202026-05-19%20at%2018.49.30.jpeg" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Zemní práce" />
                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6">
                  <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Zemní práce</p>
                  <h4 className="text-white text-xl font-bold font-heading">Výkopy základů a jímek</h4>
                </div>
             </div>
             <div className="group overflow-hidden rounded-sm relative aspect-[4/3] bg-concrete">
-               <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2070&auto=format&fit=crop" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Demoliční práce" />
+               <img src="https://img.youtube.com/vi/zqdQZmA5BIo/maxresdefault.jpg" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Demoliční práce" />
                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6">
                  <p className="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Demoliční práce</p>
                  <h4 className="text-white text-xl font-bold font-heading">Bezpečné a řízené demolice</h4>

@@ -90,12 +90,21 @@ export default function Projects() {
     },
     {
       id: 6,
-      title: "Zarovnávání terénu a výkopy",
-      location: "Karlovy Vary",
+      title: "Práce pro výstavbu baráku",
       category: "Zemní práce a demolice",
-      desc: "Rozsáhlé zarovnávání svahu včetně hutnění na požadované parametry pro stavbu haly.",
-      img: "",
-      gallery: []
+      desc: "Zemní práce pro výstavbu baráku.",
+      img: "https://marabie.eu/images_perat/vystavba_baraku/WhatsApp%20Image%202026-05-20%20at%2010.35.21%20%281%29.jpeg",
+      gallery: [
+        "https://marabie.eu/images_perat/vystavba_baraku/WhatsApp%20Image%202026-05-20%20at%2010.35.21%20%281%29.jpeg",
+        "https://marabie.eu/images_perat/vystavba_baraku/WhatsApp%20Image%202026-05-20%20at%2010.35.21%20%282%29.jpeg",
+        "https://marabie.eu/images_perat/vystavba_baraku/WhatsApp%20Image%202026-05-20%20at%2010.35.21%20%283%29.jpeg",
+        "https://marabie.eu/images_perat/vystavba_baraku/WhatsApp%20Image%202026-05-20%20at%2010.35.21%20%284%29.jpeg",
+        "https://marabie.eu/images_perat/vystavba_baraku/WhatsApp%20Image%202026-05-20%20at%2010.35.21%20%285%29.jpeg",
+        "https://marabie.eu/images_perat/vystavba_baraku/WhatsApp%20Image%202026-05-20%20at%2010.35.21%20%286%29.jpeg",
+        "https://marabie.eu/images_perat/vystavba_baraku/WhatsApp%20Image%202026-05-20%20at%2010.35.21%20%287%29.jpeg",
+        "https://marabie.eu/images_perat/vystavba_baraku/WhatsApp%20Image%202026-05-20%20at%2010.35.21%20%288%29.jpeg",
+        "https://marabie.eu/images_perat/vystavba_baraku/WhatsApp%20Image%202026-05-20%20at%2010.35.21.jpeg"
+      ]
     },
     {
       id: 8,
