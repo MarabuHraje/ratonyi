@@ -106,18 +106,21 @@ export default function Contact() {
                 e.preventDefault();
                 const form = e.currentTarget;
                 const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
                 const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
                 const originalText = submitButton?.innerHTML || '';
-                
                 if (submitButton) {
                   submitButton.disabled = true;
                   submitButton.innerHTML = 'Odesílám...';
                 }
 
                 try {
-                  const response = await fetch('/send.php', {
+                  const response = await fetch('/api/send', {
                     method: 'POST',
-                    body: formData,
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
                   });
                   const result = await response.json();
                   
