@@ -132,7 +132,8 @@ export default function Contact() {
                     alert('Zpráva byla úspěšně odeslána.');
                     form.reset();
                   } else {
-                    alert(result.message || 'Chyba při odesílání.');
+                    console.error('API Error details:', result);
+                    alert(`Chyba při odesílání: ${result.details || result.message || 'Neznámá chyba serveru'}`);
                   }
                 } catch (error) {
                   alert('Odeslání se nepodařilo. Zkuste to prosím znovu.');

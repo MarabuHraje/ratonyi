@@ -45,8 +45,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
 
     return res.status(200).json({ status: 'success', message: 'Zpráva byla úspěšně odeslána.' });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error sending email:', error);
-    return res.status(500).json({ status: 'error', message: 'Chyba serveru při odesílání.' });
+    return res.status(500).json({ status: 'error', message: 'Chyba serveru při odesílání.', details: error.message || String(error) });
   }
 }
