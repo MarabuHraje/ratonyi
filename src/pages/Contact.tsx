@@ -87,9 +87,13 @@ export default function Contact() {
                      <p className="text-gray-500 text-sm">Bankovní spojení</p>
                      <p className="text-gray-300">0413612339/0800</p>
                  </div>
-                 <div>
+                 <div className="mb-4">
                      <p className="text-gray-500 text-sm">Spisová značka</p>
                      <p className="text-gray-300 text-sm">C 129186 vedená u rejstříkového soudu v Praze</p>
+                 </div>
+                 <div>
+                     <p className="text-gray-500 text-sm">Datová schránka</p>
+                     <p className="text-gray-300 text-sm">[bude doplněno]</p>
                  </div>
                </div>
 
@@ -99,7 +103,7 @@ export default function Contact() {
           {/* Form and Map (Right) */}
           <div className="lg:col-span-7 flex flex-col gap-8">
             <div className="bg-anthracite p-8 lg:p-12 border border-concrete rounded-sm">
-              <h3 className="text-3xl font-bold mb-2 font-heading text-white">Nezávazná poptávka</h3>
+              <h3 className="text-3xl font-bold mb-2 font-heading text-white">Kontaktní formulář</h3>
               <p className="text-gray-400 mb-8">Poptáváte rekonstrukci, opravu nebo jen ceník? Vyplňte formulář níže.</p>
               
               <form className="space-y-6" onSubmit={async (e) => {
@@ -122,16 +126,9 @@ export default function Contact() {
                     },
                     body: JSON.stringify(data),
                   });
-                  const responseText = await response.text();
-                  let result: { status?: string; message?: string } = {};
-
-                  try {
-                    result = JSON.parse(responseText);
-                  } catch {
-                    result = {};
-                  }
+                  const result = await response.json();
                   
-                  if (response.ok && result.status === 'success') {
+                  if (result.status === 'success') {
                     alert('Zpráva byla úspěšně odeslána.');
                     form.reset();
                   } else {
@@ -146,41 +143,23 @@ export default function Contact() {
                   }
                 }
               }}>
-                 <input type="text" name="contact_website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                    <div>
-                     <label className="block text-sm font-medium text-gray-400 mb-2">Jméno a příjmení *</label>
-                     <input type="text" name="name" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Jan Novák" required />
+                     <label className="block text-sm font-medium text-gray-400 mb-2">Jméno *</label>
+                     <input type="text" name="name" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Vaše jméno" required />
                    </div>
                    <div>
-                     <label className="block text-sm font-medium text-gray-400 mb-2">Telefon *</label>
-                     <input type="tel" name="phone" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="+420" required />
+                     <label className="block text-sm font-medium text-gray-400 mb-2">E-mail *</label>
+                     <input type="email" name="email" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="email@domena.cz" required />
                    </div>
-                 </div>
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-400 mb-2">E-mail</label>
-                      <input type="email" name="email" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="email@domena.cz" required />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-400 mb-2">Typ služby</label>
-                      <select name="service_type" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-gray-300 focus:outline-none focus:border-primary transition-colors appearance-none">
-                        <option>Zvolte, o co máte zájem</option>
-                        <option>Kompletní rekonstrukce</option>
-                        <option>Střechy a tesařství</option>
-                        <option>Fasády a zateplení</option>
-                        <option>Zednické práce</option>
-                        <option>Jiné / Nevím</option>
-                      </select>
-                    </div>
                  </div>
                  
                  <div>
-                   <label className="block text-sm font-medium text-gray-400 mb-2">Popis projektu / zpráva *</label>
-                   <textarea name="message" rows={5} className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Kde se stavba nachází, jaký je přibližný rozsah prací?" required></textarea>
+                   <label className="block text-sm font-medium text-gray-400 mb-2">Zpráva</label>
+                   <textarea name="message" rows={5} className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Vaše zpráva..."></textarea>
                  </div>
                  <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-sm text-lg transition-colors flex justify-center items-center gap-2">
-                   Odeslat poptávku <ArrowRight className="w-5 h-5"/>
+                   Odeslat zprávu <ArrowRight className="w-5 h-5"/>
                  </button>
                  <p className="text-xs text-gray-500 text-center mt-4 flex items-center justify-center gap-2">
                     <ShieldCheck className="w-3 h-3"/>

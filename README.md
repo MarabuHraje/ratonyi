@@ -16,6 +16,5 @@ View your app in AI Studio: https://ai.studio/apps/d4622011-2f7d-4010-804e-f7a5a
 1. Install dependencies:
    `npm install`
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. For the contact form, set the SMTP variables from [.env.example](.env.example) locally and in your Vercel project environment.
-4. Run the app:
+3. Run the app:
    `npm run dev`
