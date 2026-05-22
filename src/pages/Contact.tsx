@@ -146,6 +146,7 @@ export default function Contact() {
                   }
                 }
               }}>
+                 <input type="text" name="contact_website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                    <div>
                      <label className="block text-sm font-medium text-gray-400 mb-2">Jméno a příjmení *</label>

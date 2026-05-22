@@ -21,7 +21,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return respond(res, "error", "Neplatná metoda požadavku.", 405);
   }
 
-  const payload = normalizePayload(req.body);
+  const source = parseBody(req.body);
+  const honeypotFields = splitValues(envValue("HONEYPOT_FIELDS", "contact_website"));
+
+  if (hasFilledHoneypot(source, honeypotFields)) {
+    return respond(res, "success", "Zpráva byla úspěšně odeslána.");
+  }
+
+  const payload = normalizePayload(source);
   const validationError = validatePayload(payload);
 
   if (validationError) {
@@ -102,6 +109,20 @@ function normalizePayload(body: unknown): InquiryPayload {
     service_type: normalizeServiceType(readField(source, "service_type")),
     message: readField(source, "message"),
   };
+}
+
+function hasFilledHoneypot(
+  source: Record<string, unknown>,
+  fields: string[],
+): boolean {
+  return fields.some((field) => {
+    if (!Object.prototype.hasOwnProperty.call(source, field)) {
+      return false;
+    }
+
+    const value = source[field];
+    return Array.isArray(value) || sanitizeInput(value) !== "";
+  });
 }
 
 function parseBody(body: unknown): Record<string, unknown> {
@@ -199,9 +220,13 @@ function usesStartTls(encryption: string): boolean {
 }
 
 function splitRecipients(value: string): string[] {
+  return splitValues(value);
+}
+
+function splitValues(value: string): string[] {
   return value
     .split(/[;,]/)
-    .map((recipient) => recipient.trim())
+    .map((item) => item.trim())
     .filter(Boolean);
 }
 
