@@ -122,9 +122,16 @@ export default function Contact() {
                     },
                     body: JSON.stringify(data),
                   });
-                  const result = await response.json();
+                  const responseText = await response.text();
+                  let result: { status?: string; message?: string } = {};
+
+                  try {
+                    result = JSON.parse(responseText);
+                  } catch {
+                    result = {};
+                  }
                   
-                  if (result.status === 'success') {
+                  if (response.ok && result.status === 'success') {
                     alert('Zpráva byla úspěšně odeslána.');
                     form.reset();
                   } else {
