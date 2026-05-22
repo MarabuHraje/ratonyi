@@ -13,12 +13,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.seznam.cz',
+    host: process.env.SMTP_HOST || 'mail.marek-bednar.cz',
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
       user: process.env.SMTP_USER || 'formular@marek-bednar.cz',
-      pass: process.env.SMTP_PASSWORD || '%]#$5(H{C=f)X;jy'
+      pass: process.env.SMTP_PASSWORD || '0kdPDlPtlVdWZXA'
+    },
+    tls: {
+      rejectUnauthorized: false
     }
   });
 
