@@ -19,8 +19,8 @@ async function startServer() {
 
     const transporter = nodemailer.createTransport({
       host: 'smtp.seznam.cz',
-      port: 587,
-      secure: false,
+      port: 465,
+      secure: true,
       auth: {
         user: 'formular@marek-bednar.cz',
         pass: '%]#$5(H{C=f)X;jy'

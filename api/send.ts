@@ -14,8 +14,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const transporter = nodemailer.createTransport({
     host: 'smtp.seznam.cz',
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
       user: 'formular@marek-bednar.cz',
       pass: '%]#$5(H{C=f)X;jy'
