@@ -22,8 +22,8 @@ async function startServer() {
       port: 465,
       secure: true,
       auth: {
-        user: 'formular@marek-bednar.cz',
-        pass: '%]#$5(H{C=f)X;jy'
+        user: process.env.SMTP_USER || 'formular@marek-bednar.cz',
+        pass: process.env.SMTP_PASSWORD || '%]#$5(H{C=f)X;jy'
       }
     });
 

@@ -17,8 +17,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: 'formular@marek-bednar.cz',
-      pass: '%]#$5(H{C=f)X;jy'
+      user: process.env.SMTP_USER || 'formular@marek-bednar.cz',
+      pass: process.env.SMTP_PASSWORD || '%]#$5(H{C=f)X;jy'
     }
   });
 
