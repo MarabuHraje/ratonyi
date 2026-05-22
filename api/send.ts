@@ -6,10 +6,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 
-  const { name, email, message } = req.body || {};
+  const { name, phone, email, service_type, message } = req.body || {};
 
-  if (!name || !email) {
-    return res.status(400).json({ message: 'Chybí povinná pole (Jméno, E-mail)' });
+  if (!name || !phone || !email) {
+    return res.status(400).json({ message: 'Chybí povinná pole (Jméno, Telefon, E-mail)' });
   }
 
   const transporter = nodemailer.createTransport({
@@ -23,8 +23,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   });
 
   try {
-    const safeName = name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const safeName = name ? name.replace(/</g, "&lt;").replace(/>/g, "&gt;") : '';
+    const safePhone = phone ? phone.replace(/</g, "&lt;").replace(/>/g, "&gt;") : '';
     const safeEmail = email ? email.replace(/</g, "&lt;").replace(/>/g, "&gt;") : '';
+    const safeServiceType = service_type ? service_type.replace(/</g, "&lt;").replace(/>/g, "&gt;") : '';
     const safeMessage = message ? message.replace(/</g, "&lt;").replace(/>/g, "&gt;") : '';
 
     await transporter.sendMail({
@@ -35,9 +37,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         <h3>Obdrželi jste novou zprávu z kontaktního formuláře.</h3>
         <p><strong>Od:</strong> ${safeName}</p>
         <p><strong>E-mail:</strong> ${safeEmail}</p>
+        <p><strong>Telefon:</strong> ${safePhone}</p>
+        <p><strong>Typ služby:</strong> ${safeServiceType}</p>
         <p><strong>Zpráva:</strong><br>${safeMessage.replace(/\n/g, '<br>')}</p>
       `,
-      text: `Od: ${name}\nE-mail: ${email}\n\nZpráva:\n${message}`,
+      text: `Od: ${name}\nE-mail: ${email}\nTelefon: ${phone}\nTyp služby: ${service_type}\n\nZpráva:\n${message}`,
     });
 
     return res.status(200).json({ status: 'success', message: 'Zpráva byla úspěšně odeslána.' });

@@ -93,7 +93,7 @@ export default function Contact() {
                  </div>
                  <div>
                      <p className="text-gray-500 text-sm">Datová schránka</p>
-                     <p className="text-gray-300 text-sm">[bude doplněno]</p>
+                     <p className="text-gray-300 text-sm">a93swts</p>
                  </div>
                </div>
 
@@ -145,13 +145,30 @@ export default function Contact() {
               }}>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                    <div>
-                     <label className="block text-sm font-medium text-gray-400 mb-2">Jméno *</label>
+                     <label className="block text-sm font-medium text-gray-400 mb-2">Jméno a příjmení *</label>
                      <input type="text" name="name" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Vaše jméno" required />
                    </div>
                    <div>
-                     <label className="block text-sm font-medium text-gray-400 mb-2">E-mail *</label>
-                     <input type="email" name="email" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="email@domena.cz" required />
+                     <label className="block text-sm font-medium text-gray-400 mb-2">Telefon *</label>
+                     <input type="tel" name="phone" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="+420" required />
                    </div>
+                 </div>
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-400 mb-2">E-mail *</label>
+                      <input type="email" name="email" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="email@domena.cz" required />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-400 mb-2">Typ služby</label>
+                      <select name="service_type" className="w-full bg-dark border border-concrete rounded-sm px-4 py-3 text-gray-300 focus:outline-none focus:border-primary transition-colors appearance-none">
+                        <option>Zvolte, o co máte zájem</option>
+                        <option>Kompletní rekonstrukce</option>
+                        <option>Střechy a tesařství</option>
+                        <option>Fasády a zateplení</option>
+                        <option>Zednické práce</option>
+                        <option>Jiné / Nevím</option>
+                      </select>
+                    </div>
                  </div>
                  
                  <div>
