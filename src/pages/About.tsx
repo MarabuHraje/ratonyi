@@ -72,12 +72,12 @@ export default function About() {
               </div>
             </motion.div>
             
-            <div className="relative mt-8 lg:mt-0 pr-8 pb-8">
+            <div className="relative mt-8 lg:mt-0 pr-6 pb-6">
               {/* 3D Stack effects (bottom right) */}
-              <div className="absolute top-8 left-8 right-0 bottom-0 bg-dark border-[12px] border-primary/20 rounded-sm z-0 shadow-xl"></div>
-              <div className="absolute top-4 left-4 right-4 bottom-4 bg-dark border-[12px] border-primary/50 rounded-sm z-0 shadow-xl"></div>
+              <div className="absolute top-6 left-6 right-0 bottom-0 bg-dark border-[6px] border-primary/20 rounded-sm z-0 shadow-xl"></div>
+              <div className="absolute top-3 left-3 right-3 bottom-3 bg-dark border-[6px] border-primary/50 rounded-sm z-0 shadow-xl"></div>
               
-              <div className="aspect-square md:aspect-[4/3] relative rounded-sm overflow-hidden z-10 border-[12px] border-primary shadow-2xl bg-dark">
+              <div className="aspect-square md:aspect-[4/3] relative rounded-sm overflow-hidden z-10 border-[6px] border-primary shadow-2xl bg-dark">
                 <img src="https://marabie.eu/images_perat/IMG_3717.jpeg" alt="Stavební proces" className="w-full h-full object-cover" />
               </div>
             </div>
