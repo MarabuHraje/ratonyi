@@ -81,12 +81,25 @@ export default function Projects() {
     },
     {
       id: 5,
-      title: "Rybník a retenční nádrž",
-      location: "Cheb",
+      title: "Oprava mostu a mostních pilířů",
       category: "Stavby vodního hospodářství",
-      desc: "Výstavba rybníka, navazující retenční i vsakovací nádrže včetně vybudování kvalitního přítoku.",
-      img: "",
-      gallery: []
+      desc: "Komplexní oprava mostu a mostních pilířů.",
+      img: "https://marabie.eu/images_perat/oprava_mostu/001.JPG",
+      gallery: [
+        "https://marabie.eu/images_perat/oprava_mostu/001.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/008.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/022.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/080.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/081.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/087.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/094.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/095.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/101.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/118.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/119.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/120.JPG",
+        "https://marabie.eu/images_perat/oprava_mostu/124.JPG"
+      ]
     },
     {
       id: 6,
