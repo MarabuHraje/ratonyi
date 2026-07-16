@@ -92,15 +92,15 @@ export default function Contact() {
                    </div>
                  </div>
                  <div className="mb-4">
-                     <p className="text-gray-500 text-sm">Bankovní spojení</p>
+                     <p className="text-gray-500 text-sm">Bankovní spojení ČSAS (CZK)</p>
                      <p className="text-gray-300">0413612339/0800</p>
                  </div>
                  <div className="mb-4">
-                     <p className="text-gray-500 text-sm">Fio účet (CZ)</p>
+                     <p className="text-gray-500 text-sm">Bankovní spojení Fio (CZK)</p>
                      <p className="text-gray-300">2503550054/2010</p>
                  </div>
                  <div className="mb-4">
-                     <p className="text-gray-500 text-sm">Fio účet (EUR)</p>
+                     <p className="text-gray-500 text-sm">Bankovní spojení Fio (EUR)</p>
                      <p className="text-gray-300">2003550058/2010</p>
                  </div>
                  <div className="mb-4">
