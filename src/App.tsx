@@ -194,8 +194,16 @@ function Footer() {
                  <span className="text-white font-medium">CZ27955460</span>
               </li>
               <li className="flex flex-col border-b border-concrete pb-2 mt-2">
-                 <span className="text-sm">Bankovní spojení</span>
+                 <span className="text-sm">Bankovní spojení ČSAS (CZK)</span>
                  <span className="text-white font-medium">0413612339/0800</span>
+              </li>
+              <li className="flex flex-col border-b border-concrete pb-2 mt-2">
+                 <span className="text-sm">Bankovní spojení Fio (CZK)</span>
+                 <span className="text-white font-medium">2503550054/2010</span>
+              </li>
+              <li className="flex flex-col border-b border-concrete pb-2 mt-2">
+                 <span className="text-sm">Bankovní spojení Fio (EUR)</span>
+                 <span className="text-white font-medium">2003550058/2010</span>
               </li>
               <li className="flex flex-col border-concrete pb-2 mt-2">
                  <span className="text-sm">Spisová značka</span>
