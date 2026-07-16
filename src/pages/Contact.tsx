@@ -96,6 +96,14 @@ export default function Contact() {
                      <p className="text-gray-300">0413612339/0800</p>
                  </div>
                  <div className="mb-4">
+                     <p className="text-gray-500 text-sm">Fio účet (CZ)</p>
+                     <p className="text-gray-300">2503550054/2010</p>
+                 </div>
+                 <div className="mb-4">
+                     <p className="text-gray-500 text-sm">Fio účet (EUR)</p>
+                     <p className="text-gray-300">2003550058/2010</p>
+                 </div>
+                 <div className="mb-4">
                      <p className="text-gray-500 text-sm">Spisová značka</p>
                      <p className="text-gray-300 text-sm">C 129186 vedená u rejstříkového soudu v Praze</p>
                  </div>
